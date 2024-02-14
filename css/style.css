@@ -1,19 +1,38 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
+h1, h5 {
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+p {
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+
+    /*
+.cardMember {
+    background-color: #f7e7ce;
+}
+
 .equipo .miembro{
     position:relative;
     padding: 40px;
     border-radius: 70px;
     background: #f7e7ce ;
+    display: flex;
 }
 .equipo .miembro .imagenequipo{
     overflow: hidden;
     width: 250px;
     height: 250px;
-    
     
 }
 
@@ -24,7 +43,6 @@
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 40px;
-    /* color: ; */
 }
 
 .equipo .miembro span{
@@ -48,3 +66,4 @@
     margin: 10px 0 0 0;
     font-size: 14px;
 }
+*/
