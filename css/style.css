@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.equipo .miembro{
+    position:relative;
+    padding: 40px;
+    border-radius: 70px;
+    background: #f7e7ce ;
+}
+.equipo .miembro .imagenequipo{
+    overflow: hidden;
+    width: 250px;
+    height: 250px;
+    
+    
+}
+
+.equipo .miembro .info{
+    padding-left: 20px;
+}
+.equipo .miembro h4{
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 40px;
+    /* color: ; */
+}
+
+.equipo .miembro span{
+    display: block;
+    font-size: 15px;
+    padding-bottom: 10px;
+    position: relative;
+    font-weight: 500;
+}
+.equipo .miembro span::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: black ;
+    bottom: 0;
+    left: 0;
+}
+.equipo .miembro p{
+    margin: 10px 0 0 0;
+    font-size: 14px;
+}
