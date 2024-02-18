@@ -5,14 +5,14 @@ font-style: normal;
 text-align: center;
 }
 
-.form-label {
+.txtNombre {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight:bold;
     font-style:normal;
 }
 
-.btn {
+.btnEnviar {
     background-color: #7ba05b;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
