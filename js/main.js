@@ -4,6 +4,8 @@ let txtNombre = document.getElementById("Nombre");
 let txtTelefono = document.getElementById("Telefono");
 let txtCorreo = document.getElementById("Correo");
 let btnEnviar = document.getElementById("btnEnviar");
+let txtInput = document.getElementById("TextInput");
+
 
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
@@ -17,7 +19,7 @@ btnEnviar.addEventListener("click", function (event) {
     if (txtNombre.value.length < 3) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Nombre </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
-        txtNombre.style.border = "solid red thin";
+        txtNombre.style.border = "solid red thin";t
         isValid = false;
     }
 
@@ -61,5 +63,12 @@ function validarTelefono() {
         return false
     }//if
     return true;
+
+
 }//validarCantidad
+
+function validarMensaje() {
+    return txtInput.value.length >= 10;
+}//if length Nombre
+ 
 
