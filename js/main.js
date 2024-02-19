@@ -11,7 +11,9 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
 //Se agregaron las excepciones de simbolos que no deben esta en correo
-var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
+
 
 //alerta Validación 
 
@@ -54,6 +56,8 @@ btnEnviar.addEventListener("click", function (event) {
         txtTelefono.style.border = "solid red thin";
         
     }
+
+
     //alert("El teléfono debe tener 10 dígitos numéricos."); 
 
     if (txtInput.value.length < 9) {
@@ -63,7 +67,11 @@ btnEnviar.addEventListener("click", function (event) {
         
     }
     //alert("El Mensaje debe tener más de 10 carácteres"); 
-
+    if(regex.test(txtTelefono.value)) {
+        alertValidacionesTexto.innerHTML="";
+    } else {
+        alertValidacionesTexto.innerHTML="El Número telefónico tiene un formato incorrecto";
+    }
     
 
         txtNombre.value="";
@@ -71,6 +79,9 @@ btnEnviar.addEventListener("click", function (event) {
         txtCorreo.value="";
         txtInput.value="";
         txtNombre.focus();
+
+
+
 }); //btnEnviar
 
 btnClear.addEventListener("click", function(event){
@@ -96,24 +107,35 @@ function validarCorreo(correo) {
     return expReg.test(correo);
 }//validarCorreo
 
-txtTelefono.value = txtNombre.value.trim();
-function validarTelefono() {
-    if (txtTelefono.value.length < 10) {
-        return false;
-    }//if length
-    if (isNaN(txtTelefono.value)) {
-        return false
-    }//isNaN
-    if (Number(txtTelefono.value) <= 0) {
-        return false
-    }//if
-    return true;
+//txtTelefono.value = txtNombre.value.trim();
+//function validarTelefono() {
+    //if (txtTelefono.value.length < 10) {
+        //return false;
+    //}//if length
+    //if (isNaN(txtTelefono.value)) {
+        //return false
+    //}//isNaN
+    //if (Number(txtTelefono.value) <= 0) {
+        //return false
+    //}//if
+    //return true;
 
 
-}//validarTelefono
+//}//validarTelefono
 
 function validarMensaje() {
     return txtInput.value.length >= 10;
 }//Validar mensaje
+ 
+function validaNumero() {
+    if(regex.test(txtTelefono.value)) {
+        alertValidacionesTexto.innerHTML="";
+    } else {
+        alertValidacionesTexto.innerHTML="El Número telefónico tiene un formato incorrecto";
+    }//else
+    txtTelefono.focus();
+
+    return txtTelefono.value.length >=10;
+}
  
 
