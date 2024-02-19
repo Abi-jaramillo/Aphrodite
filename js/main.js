@@ -1,51 +1,96 @@
-
-
 let txtNombre = document.getElementById("Nombre");
 let txtTelefono = document.getElementById("Telefono");
 let txtCorreo = document.getElementById("Correo");
 let btnEnviar = document.getElementById("btnEnviar");
+let btnClear = document.getElementById ("btnClear");
 let txtInput = document.getElementById("TextInput");
+let deselectSelect =document.getElementById("deselectSelect");
 
 
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
+//Se agregaron las excepciones de simbolos que no deben esta en correo
 var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
-//alerta Validación NATASHA
+
+//alerta Validación 
 
 btnEnviar.addEventListener("click", function (event) {
     event.preventDefault();
 
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
+
+    txtNombre.value = txtNombre.value.trim();
+    txtTelefono.value = txtTelefono.value.trim();
+    txtCorreo.value = txtCorreo.value.trim();
+    txtInput.value = txtInput.value.trim();
+
+    txtNombre.style.border="";
+    txtTelefono.style.border="";
+    txtCorreo.style.border="";
+    txtInput.style.border="";
+
+
     if (txtNombre.value.length < 3) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Nombre </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
-        txtNombre.style.border = "solid red thin";t
-        isValid = false;
+        txtNombre.style.border = "solid red thin";
+        
     }
 
-    //alert("El nombre debe tener al menos 3 caracteres."); NATASHA
+    //alert("El nombre debe tener al menos 3 caracteres."); 
     if (txtCorreo.value.length < 3) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
-        txtNombre.style.border = "solid red thin";
-        isValid = false;
+        txtCorreo.style.border = "solid red thin";
+        
     }
-    //alert("El correo electrónico no es válido."); NATASHA
+    //alert("El correo electrónico no es válido."); 
 
     if (txtTelefono.value.length < 10) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Número telefónico </strong> ingresado no es correcto <br/>`);
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
-        txtNombre.style.border = "solid red thin";
-        isValid = false;
+        txtTelefono.style.border = "solid red thin";
+        
     }
-    //alert("El teléfono debe tener 10 dígitos numéricos."); NATASHA
+    //alert("El teléfono debe tener 10 dígitos numéricos."); 
 
+    if (txtInput.value.length < 9) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> ingresado no es válido <br/>`);
+        alertValidaciones.style.display = "block";
+        txtInput.style.border = "solid red thin";
+        
+    }
+    //alert("El Mensaje debe tener más de 10 carácteres"); 
+
+    
+
+        txtNombre.value="";
+        txtTelefono.value="";
+        txtCorreo.value="";
+        txtInput.value="";
+        txtNombre.focus();
+}); //btnEnviar
+
+btnClear.addEventListener("click", function(event){
+    event.preventDefault();
+    txtNombre.value="";
+    txtTelefono.value="";
+    txtCorreo.value="";
+    txtInput.value="";
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
+    txtNombre.style.border="";
+    txtTelefono.style.border="";
+    txtCorreo.style.border="";
+    txtInput.style.border="";
 });
 
 
 function validarNombre() {
     return txtNombre.value.length >= 3;
-}//if length Nombre
+}//ValidarNombre
 
 function validarCorreo(correo) {
     return expReg.test(correo);
@@ -65,10 +110,10 @@ function validarTelefono() {
     return true;
 
 
-}//validarCantidad
+}//validarTelefono
 
 function validarMensaje() {
     return txtInput.value.length >= 10;
-}//if length Nombre
+}//Validar mensaje
  
 
