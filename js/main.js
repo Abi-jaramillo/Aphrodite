@@ -15,6 +15,14 @@ let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(
 let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
 
 
+//llaves de acceso a emailJS(sin ellas no funciona)
+const publickey ="P52ZacbrVINZjA08C";
+const serviceID ="service_de1smlf";
+const templateID ="contact_form"
+
+
+emailjs.init(publickey);
+
 //alerta Validación 
 
 btnEnviar.addEventListener("click", function (event) {
@@ -74,9 +82,26 @@ btnEnviar.addEventListener("click", function (event) {
     }
     
 
-        txtNombre.value="";
-        txtTelefono.value="";
-        txtCorreo.value="";
+        //Se usa el boton de enviar con estos campos requeridos
+        const inputFields ={
+            user_name : txtNombre.value,
+            user_email :txtCorreo.value,
+            message : txtInput.value.value,
+            }
+            console.log(inputFields);
+
+        
+
+            emailjs.send(serviceID,templateID,inputFields)
+            .then(() => {
+                console.log("Mensaje enviado correctamente");
+                    
+            }, (error)=>{
+            console.log(error);
+            });
+                txtNombre.value="";
+                txtTelefono.value="";
+                txtCorreo.value="";
         txtInput.value="";
         txtNombre.focus();
 
@@ -137,7 +162,4 @@ function validaNumero() {
 
     return txtTelefono.value.length >=10;
 }
- 
 
-
-  
