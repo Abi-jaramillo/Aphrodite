@@ -6,7 +6,6 @@ let btnClear = document.getElementById ("btnClear");
 let txtInput = document.getElementById("TextInput");
 let deselectSelect =document.getElementById("deselectSelect");
 
-
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
@@ -40,69 +39,74 @@ btnEnviar.addEventListener("click", function (event) {
     txtTelefono.style.border="";
     txtCorreo.style.border="";
     txtInput.style.border="";
-
-
-    if (txtNombre.value.length < 3) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Nombre </strong> ingresado no es correcto <br/>`);
-        alertValidaciones.style.display = "block";
-        txtNombre.style.border = "solid red thin";
-        
-    }
-
-    //alert("El nombre debe tener al menos 3 caracteres."); 
-    if (txtCorreo.value.length < 3) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
-        alertValidaciones.style.display = "block";
-        txtCorreo.style.border = "solid red thin";
-        
-    }
-    //alert("El correo electrónico no es válido."); 
+    deselectSelect.style.border="";
 
     if (txtTelefono.value.length < 10) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
         txtTelefono.style.border = "solid red thin";
+    } //alert("El teléfono debe tener 10 dígitos numéricos.");
+
+    if (txtCorreo.value.length < 3 ) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
+        alertValidaciones.style.display = "block";
+        txtCorreo.style.border = "solid red thin";
+            
+        }//alert("El correo electrónico no es válido."); 
         
-    }
-
-
-    //alert("El teléfono debe tener 10 dígitos numéricos."); 
+    
+    if (txtNombre.value.length < 3) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Nombre </strong> ingresado no es correcto <br/>`);
+        alertValidaciones.style.display = "block";
+        txtNombre.style.border = "solid red thin";
+        
+    }//alert("El nombre debe tener al menos 3 caracteres."); 
 
     if (txtInput.value.length < 9) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Mensaje </strong> ingresado no es válido <br/>`);
         alertValidaciones.style.display = "block";
         txtInput.style.border = "solid red thin";
         
-    }
-    //alert("El Mensaje debe tener más de 10 carácteres"); 
-    if(regex.test(txtTelefono.value)) {
-        alertValidacionesTexto.innerHTML="";
-    } else {
-        alertValidacionesTexto.innerHTML="El Número telefónico tiene un formato incorrecto";
-    }
+    }//alert("El Mensaje debe tener más de 10 carácteres"); 
     
+    if (deselectSelect.value ==0){
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `No ha <strong> seleccionado </strong> una opción <br/>`);
+        alertValidaciones.style.display = "block";
+        deselectSelect.style.border = "solid red thin";
+    }
 
-        //Se usa el boton de enviar con estos campos requeridos
-        const inputFields ={
-            user_name : txtNombre.value,
-            user_email :txtCorreo.value,
-            message : txtInput.value.value,
-            }
-            console.log(inputFields);
-
+    if(! regex.test(txtTelefono.value)) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> tiene un formato incorrecto <br/>`);
+            alertValidaciones.style.display = "block";
+            txtCorreo.style.border = "solid red thin";
         
+    } 
+    
+        //Se usa el boton de enviar con estos campos requeridos
+       const inputFields ={
+        user_name : txtNombre.value,
+        user_email : txtCorreo.value,
+        user_phone : txtTelefono.value,
+        message : txtInput.value,
+        user_selection : deselectSelect.value,
+        }
+         console.log(inputFields);
 
-            emailjs.send(serviceID,templateID,inputFields)
-            .then(() => {
-                console.log("Mensaje enviado correctamente");
-                    
-            }, (error)=>{
-            console.log(error);
-            });
+
+
+          emailjs.send(serviceID,templateID, inputFields)
+          .then(() => {
+             console.log("Mensaje enviado correctamente");
+                 
+          }, (error)=>{
+          console.log(error);
+          });
+
                 txtNombre.value="";
                 txtTelefono.value="";
                 txtCorreo.value="";
-        txtInput.value="";
+                txtInput.value="";
+                deselectSelect.value="";
         txtNombre.focus();
 
 
@@ -121,6 +125,7 @@ btnClear.addEventListener("click", function(event){
     txtTelefono.style.border="";
     txtCorreo.style.border="";
     txtInput.style.border="";
+    deselectSelect.style.border="";
 });
 
 
@@ -146,20 +151,13 @@ function validarCorreo(correo) {
     //return true;
 
 
-//}//validarTelefono
+//}
 
 function validarMensaje() {
     return txtInput.value.length >= 10;
 }//Validar mensaje
- 
-function validaNumero() {
-    if(regex.test(txtTelefono.value)) {
-        alertValidacionesTexto.innerHTML="";
-    } else {
-        alertValidacionesTexto.innerHTML="El Número telefónico tiene un formato incorrecto";
-    }//else
-    txtTelefono.focus();
 
-    return txtTelefono.value.length >=10;
-}
+
+ 
+
 
