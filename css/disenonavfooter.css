@@ -1,9 +1,3 @@
-.footer-basic {
-  padding: 40px 0;
-  background-color: #ffffff;
-  color: #4b4c4d;
-}
-
 .footer-basic ul {
   padding: 0;
   list-style: none;
@@ -11,7 +5,7 @@
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
-}
+ }
 
 .footer-basic li {
   padding: 0 10px;
@@ -33,21 +27,23 @@
 }
 
 .footer-basic .social>a {
-  font-size: 24px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  display: inline-block;
-  text-align: center;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  margin: 0 8px;
-  color: inherit;
-  opacity: 0.75;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  color: #f7e7ce;
+  font-size: 20px;
+  margin: 5px 5px;
+  transition: all 0.6s ease-in-out;
+  background: #7ba05b ;
+  
+  padding: 10px 20px;
+  border-radius: 100px;
 }
 
 .footer-basic .social>a:hover {
-  opacity: 0.9;
+  transform: translateY(-10px);
 }
 
 .footer-basic .copyright {
@@ -65,6 +61,7 @@
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+  
 }
 
 .navbar-brand {
@@ -76,16 +73,33 @@
   background-color: #f2f3f4;
 
 }
-
-
-
 #lista {
   background-color: #f2f3f4;
   width: 100%;
-  z-index: 3;
+  margin:0 0 20px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 2%;
+}
+.nav-link{
+  display: inline-block;
+  position: relative;
+}
+.nav-link::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7ba05b;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.7s ease-out;
+}
+.nav-link:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .navbar-nav {
@@ -93,6 +107,22 @@
 }
 
 #carrito {
-  background-color: #81AE64;
-
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    color: #7ba05b;
+    font-size: 25px;
+    margin: 5px 5px;
+    transition: all 0.6s ease-in-out;
+    background: #f7e7ce;
+    
+    padding: 10px 20px;
+    border-radius: 100px;
 }
+#carrito:hover {
+  transform: translateY(-10px);
+  
+}
+

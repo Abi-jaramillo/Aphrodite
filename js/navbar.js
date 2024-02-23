@@ -2,7 +2,7 @@ let navbar = document.getElementById("navbar");
 navbar.insertAdjacentHTML("beforeend", `
     <nav class= "navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Aphrodite</a>
+        <a class="navbar-brand" href="/HTML/principal.html">Aphrodite</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -17,25 +17,25 @@ navbar.insertAdjacentHTML("beforeend", `
                     <a class="nav-link active" aria-current="page" href="/src/">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Tienda</a>
+                    <a class="nav-link active" aria-current="page" href="/HTML/tienda.html">Tienda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contáctanos</a>
+                    <a class="nav-link active" aria-current="page" href="/HTML/contactanos.html">Contáctanos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Reservaciones</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Reseñas</a>
+                    <a class="nav-link active" aria-current="page" href="/HTML/reseñas.html">Reseñas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+                    <a class="nav-link active" aria-current="page" href="/HTML/acercadenosotros.html">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Blog</a>
                 </li>
                 
-                <button type="button" class="btn btn-success" id= "carrito">Carrito</button>
+                <a href="#" target="_blank"><i id="carrito" class="bi bi-cart3"></i></a>
               
             </ul>
             
