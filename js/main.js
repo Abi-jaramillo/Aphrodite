@@ -9,7 +9,7 @@ let deselectSelect =document.getElementById("deselectSelect");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
-//Se agregaron las excepciones de simbolos que no deben esta en correo
+//Se agregaron las excepciones de simbolos que no deben estar en correo
 let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
 
@@ -45,7 +45,7 @@ btnEnviar.addEventListener("click", function (event) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> ingresado no es correcto <br/>`);
         alertValidaciones.style.display = "block";
         txtTelefono.style.border = "solid red thin";
-    } //alert("El teléfono debe tener 10 dígitos numéricos.");
+    } //alert("El teléfono debe tener 10 dígitos.");
 
     if (txtCorreo.value.length < 3 ) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
