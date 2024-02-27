@@ -106,7 +106,7 @@
   font-family: "Quicksand", sans-serif;
 }
 
-#carrito {
+#carrito1 {
   display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@
     padding: 10px 20px;
     border-radius: 100px;
 }
-#carrito:hover {
+#carrito1:hover {
   transform: translateY(-10px);
   
 }

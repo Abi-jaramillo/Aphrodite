@@ -35,7 +35,7 @@ navbar.insertAdjacentHTML("beforeend", `
                     <a class="nav-link active" aria-current="page" href="#">Blog</a>
                 </li>
                 
-                <a href="#" target="_blank"><i id="carrito" class="bi bi-cart3"></i></a>
+                <a href="#" target="_blank"><i id="carrito1" class="bi bi-cart3"></i></a>
               
             </ul>
             
