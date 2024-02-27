@@ -1,6 +1,7 @@
 let footer = document.getElementById("footer");
-footer.insertAdjacentHTML("beforebegin", `<div class="footer-basic">
-<footer>
+footer.insertAdjacentHTML("beforebegin", 
+`<div class="footer-basic">
+    <footer>
     <div class="social">
     <a href="#"><i class="bi bi-instagram"></i></a>
     <a href="#"><i class="bi bi-tiktok"></i></a>
@@ -15,5 +16,5 @@ footer.insertAdjacentHTML("beforebegin", `<div class="footer-basic">
         <li class="list-inline-item"><a href="/HTML/reseñas.html">Reseñas</a></li>
     </ul>
     <p class="copyright">Aphrodite © 2024</p>
-</footer>
-</div>`)
+    </footer>
+</div>`);
