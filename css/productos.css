@@ -1,0 +1,30 @@
+
+*{
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center; 
+}
+
+.card-wraper{
+       column-gap: 10px;
+}
+
+    #carrito-productos {
+        display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: #ffffff;
+          font-size: 20px;
+          margin: 5px 5px ;
+          border: #7ba05b;
+
+          transition: all 0.25s ease-in-out;
+          background: #7ba05b;
+          
+          padding: 10px 20px;
+      }
+    #carrito-productos:hover {
+        transform: translateY(-10px);
+        
+      }
