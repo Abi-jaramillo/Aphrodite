@@ -23,12 +23,12 @@ addItem({'name':'Acondicionador',
     'description':'Esta crema hidratante suave pero intensa es justo lo que necesitas, ya que repone la humedad y reduce el encrespamiento',
     'price':'$260'});
 
-    addItem({'name':'Mascarilla',
+addItem({'name':'Mascarilla',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_MascarillaCapilarPlatano_240ml_Haircare_1800x1800.jpg?v=1670956529',
     'description':' nutre intensamente el cabello de la raíz a las puntas, dejándolo más brillante al instante, combatiendo el frizz sin apelmazar el cabello',
     'price':'$180'});
     
-    addItem({'name':'Cepillo',
+addItem({'name':'Cepillo',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_CepilloCuadradoDeBambooGrande_Accesorios_1800x1800.jpg?v=1667254507',
     'description':'Cepillo ovalado de bambú grande',
     'price':'$90'});
