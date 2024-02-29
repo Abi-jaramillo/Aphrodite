@@ -5,6 +5,9 @@
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Alata", sans-serif;
 }
 
 .footer-basic li {
@@ -52,6 +55,7 @@
   font-size: 13px;
   color: #aaa;
   margin-bottom: 0;
+  
 }
 
 .footer-basic {
@@ -124,5 +128,11 @@
 #carrito1:hover {
   transform: translateY(-10px);
   
+}
+
+.nav-item{
+  font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
