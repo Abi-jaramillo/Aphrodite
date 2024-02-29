@@ -105,7 +105,12 @@ btnEnviar.addEventListener("click", function (event) {
 
           emailjs.send(serviceID,templateID, inputFields)
           .then(() => {
-             console.log("Mensaje enviado correctamente");
+            Swal.fire({
+                icon: "success",
+                title: "Envio exitoso",
+                showConfirmButton: false,
+                timer: 1500
+              });
                  
           }, (error)=>{
           console.log(error);

@@ -52,12 +52,12 @@
     transition: width 0.5s ;
 }
 
-.img-box:nth-child(2){
+#img-box1{
     background: url(https://mdbeducation.com/wp-content/uploads/2023/11/guia-practica-para-identificar-el-rostro-de-un-cliente-8282.jpg);
     background-size: cover;
     background-position: center;
 }
-.img-box:nth-child(3){
+#img-box2{
     background: url(https://m.media-amazon.com/images/I/41o4AWNAQhS.jpg);
     background-size: cover;
     background-position: center;
