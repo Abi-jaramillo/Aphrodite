@@ -35,4 +35,3 @@ addItem({'name':'Cepillo',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_CepilloCuadradoDeBambooGrande_Accesorios_1800x1800.jpg?v=1667254507',
     'description':'Cepillo ovalado de bambú grande',
     'price':'$90'});
-
