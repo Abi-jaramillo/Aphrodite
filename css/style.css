@@ -15,9 +15,9 @@ p {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
- }
- 
- .profile-area{
+}
+
+.profile-area{
     padding: 80px 0;
 }
 .section-title{
@@ -41,16 +41,16 @@ p {
     width: 100%;
 }
 .img1 img{
-   position: relative;
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-   z-index: 1;
-   width: 200px;
-   height: 200px;
-   border-radius: 50%;
-   border: 10px solid#dddd;;
-   margin-top: -100px;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid#dddd;;
+    margin-top: -100px;
 }
 .card:hover .img1 img{
     border-color: gold;
