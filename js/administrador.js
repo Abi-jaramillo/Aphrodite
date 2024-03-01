@@ -4,9 +4,18 @@ let txtPrecio = document.getElementById ("Precio");
 let txtInput = document.getElementById("TextInput");
 let btnEnviar = document.getElementById("btnEnviar");
 let btnClear = document.getElementById ("btnClear");
+let imagenProducto = document.querySelector("#imagenProducto");
+let imagen_src = document.querySelector("#imagenProducto");
+//Html Secciones print
+let contenedorHair = document.getElementById("containerHair");
+let cuerpoHTMLHair = contenedorHair.getElementsById("list-itemsHair");
+let cuerpoHTMLSkin = document.getElementById("list-itemsSkin");
+let cuerpoHTMLMakeUp = document.getElementById("list-itemsMakeUp");
 
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+
+let datos = new Array();
 
 //se agrega la validación para el precio
 let regex = new RegExp ("^[$]+[0-9]+([.][0-9]+)?$");
@@ -43,7 +52,7 @@ btnEnviar.addEventListener("click", function (event) {
         txtCategoria.style.border = "solid red thin";
         existError=true;
             
-        }//alert 
+    }//alert 
         
     
     if (nombreProducto.value.length < 5) {
@@ -70,6 +79,26 @@ btnEnviar.addEventListener("click", function (event) {
         existError=true;
         
     } //alert precio
+     
+    let imagen = imagen_src.src;
+   
+    if(!existError){
+        let elemento= `{"name":"${nombreProducto.value}",
+                    "section":"${txtCategoria.value}",
+                    "img":"${imagen.value}",
+                    "description":"${txtInput.value}",
+                    "price":"${txtPrecio.value}"}`;   
+                    
+        datos.push(JSON.parse(elemento));
+       
+
+        console.log(datos)
+
+        localStorage.setItem("datos",JSON.stringify(datos));
+       
+    }
+
+    
 
                 nombreProducto.value="";
                 txtPrecio.value="";
@@ -103,9 +132,10 @@ function validarMensaje() {
 
 //Se agrega el botón para subir imágenes
 document.getElementById("cloudinary").innerHTML = `
-                            <div>
+                                                       
+                            
                             <button id="upload_widget" class="cloudinary-button" type="button">Subir imagen</button>
-                            </div>
+                            
                             `;
 var myWidget = cloudinary.createUploadWidget(
     {
@@ -114,7 +144,8 @@ var myWidget = cloudinary.createUploadWidget(
 }, 
     (error, result) => { 
     if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info); 
+      console.log('Done! Here is the image info: ', result.info);
+      imagenProducto.src = result.info.secure_url; 
     }
   }
 ); //myWidget Cloudinary
@@ -122,7 +153,37 @@ var myWidget = cloudinary.createUploadWidget(
 document.getElementById("upload_widget").addEventListener("click", function()
   { 
  myWidget.open();
-    }, 
-    false
+    },false
 ); //Event Cloudinary
 
+window.addEventListener("load",function(event){
+    event.preventDefault();
+    if(this.localStorage.getItem("datos")!=null){
+        datos = JSON.parse(this.localStorage.getItem("datos"));
+        datos.forEach((r) => {
+         let= card = `<div class=col> <div class="card">
+         <img src=${r.img} class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">${r.name}</h5>
+           <h6 class="card-title">${r.section}</h5>
+           <p class="card-text">${r.description}</p>
+           <p class="card-text">${r.price}</p>
+           <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
+           
+         </div>
+       </div> 
+       </div> 
+       </br>`;
+            
+       if(r.section == "cabello"){
+         cuerpoHTMLHair.insertAdjacentHTML("beforeend",card);
+       }else if(r.section == "piel"){
+         cuerpoHTMLSkin.insertAdjacentHTML("beforeend",card);
+       }else{
+         cuerpoHTMLMakeUp.insertAdjacentHTML("beforeend",card);
+       };
+         
+       });//forEach
+    };//if
+    
+});//Window

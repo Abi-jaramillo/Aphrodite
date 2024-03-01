@@ -12,7 +12,7 @@ function addItem(item) {
 </div> 
 </div> 
 </br>`;
-  const itemsContainer = document.getElementById("list-items");
+  const itemsContainer = document.getElementById("list-itemsMakeUp");
   itemsContainer.innerHTML += itemHTML;
 }
 
