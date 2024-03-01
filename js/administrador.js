@@ -104,10 +104,9 @@ function validarMensaje() {
 //Se agrega el botón para subir imágenes
 document.getElementById("cloudinary").innerHTML = `
                             <div>
-                            <button id="upload_widget" class="cloudinary-button">Subir imagen</button>
+                            <button id="upload_widget" class="cloudinary-button" type="button">Subir imagen</button>
                             </div>
                             `;
- 
 var myWidget = cloudinary.createUploadWidget(
     {
   cloudName: 'dgvtyuvyw', 
