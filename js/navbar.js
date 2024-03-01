@@ -28,6 +28,9 @@ navbar.insertAdjacentHTML("beforeend", `
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../HTML/blog.html">Blog</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../HTML/administrador.html">Administrador</a>
+                </li>
                 
                 <a href="#" target="_blank"><i id="carrito1" class="bi bi-cart3"></i></a>
             </ul>

@@ -13,7 +13,8 @@ footer.insertAdjacentHTML("beforebegin",
         <li class="list-inline-item"><a href="../HTML/tienda.html">Tienda</a></li>
         <li class="list-inline-item"><a href="../HTML/acercadenosotros.html">Nosotros</a></li>
         <li class="list-inline-item"><a href="../HTML/contactanos.html">Contáctanos</a></li>
-    </ul>
+        <li class="list-inline-item"><a href="../HTML/administrador.html">Administrador</a></li>
+        </ul>
     <p class="copyright">Aphrodite © 2024</p>
     </footer>
 </div>`);
