@@ -58,5 +58,31 @@ addItem({
   'price': '$90'
 });
 
+let mainProd = document.getElementById("list-itemsMakeUp")
+window.addEventListener("load",function(event){
+  event.preventDefault();
+  if(this.localStorage.getItem("datos")!=null){
+      datos = JSON.parse(this.localStorage.getItem("datos"));
+      datos.forEach((r) => {
+       let= card = `<div class=col> <div class="card">
+       <img src=${r.img} class="card-img-top" alt="...">
+       <div class="card-body">
+         <h5 class="card-title">${r.name}</h5>
+         <h6 class="card-title">${r.section}</h5>
+         <p class="card-text">${r.description}</p>
+         <p class="card-text">${r.price}</p>
+         <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
+         
+       </div>
+     </div> 
+     </div> 
+     </br>`;
+     if(r.section === 'maquillaje'){
+     mainProd.insertAdjacentHTML("beforeend",card);
+  };
+     
+  });//forEach
+};//if
+});
 
 

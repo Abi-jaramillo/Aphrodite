@@ -4,13 +4,10 @@ let txtPrecio = document.getElementById ("Precio");
 let txtInput = document.getElementById("TextInput");
 let btnEnviar = document.getElementById("btnEnviar");
 let btnClear = document.getElementById ("btnClear");
-let imagenProducto = document.querySelector("#imagenProducto");
-let imagen_src = document.querySelector("#imagenProducto");
-//Html Secciones print
-let contenedorHair = document.getElementById("containerHair");
-let cuerpoHTMLHair = contenedorHair.getElementsById("list-itemsHair");
-let cuerpoHTMLSkin = document.getElementById("list-itemsSkin");
-let cuerpoHTMLMakeUp = document.getElementById("list-itemsMakeUp");
+const boton_foto=document.querySelector("#btn-foto");
+const imagen = document.querySelector("#user-foto");
+let img = document.querySelector("#user-foto");
+
 
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
@@ -80,31 +77,30 @@ btnEnviar.addEventListener("click", function (event) {
         
     } //alert precio
      
-    let imagen = imagen_src.src;
+    let imgUrl = img.src; 
    
     if(!existError){
         let elemento= `{"name":"${nombreProducto.value}",
                     "section":"${txtCategoria.value}",
-                    "img":"${imagen.value}",
+                    "img":"${imgUrl}",
                     "description":"${txtInput.value}",
                     "price":"${txtPrecio.value}"}`;   
                     
-        datos.push(JSON.parse(elemento));
-       
-
+        datos.push(JSON.parse(elemento));   
         console.log(datos)
-
         localStorage.setItem("datos",JSON.stringify(datos));
-       
-    }
-
-    
-
+        Swal.fire({
+            icon: "success",
+            title: "Producto añadido",
+            showConfirmButton: false,
+            timer: 1500
+          });
+    };
                 nombreProducto.value="";
                 txtPrecio.value="";
                 txtCategoria.value="";
                 txtInput.value="";
-        nombreProducto.focus();
+                nombreProducto.focus();
 
 });
 
@@ -131,59 +127,17 @@ function validarMensaje() {
 }//Validar mensaje
 
 //Se agrega el botón para subir imágenes
-document.getElementById("cloudinary").innerHTML = `
-                                                       
-                            
-                            <button id="upload_widget" class="cloudinary-button" type="button">Subir imagen</button>
-                            
-                            `;
-var myWidget = cloudinary.createUploadWidget(
-    {
-  cloudName: 'dgvtyuvyw', 
-  uploadPreset: 'aphrodite'
-}, 
-    (error, result) => { 
-    if (!error && result && result.event === "success") { 
-      console.log('Done! Here is the image info: ', result.info);
-      imagenProducto.src = result.info.secure_url; 
+let widget_cloudinary = cloudinary.createUploadWidget({
+    cloudName : 'dgvtyuvyw',
+    uploadPreset : 'aphrodite'
+},(err,result)=>{
+    if(!err && result && result.event === 'success'){
+        console.log('Imagen subida con exito',result.info);
+        imagen.src = result.info.secure_url;
     }
-  }
-); //myWidget Cloudinary
+});
 
-document.getElementById("upload_widget").addEventListener("click", function()
-  { 
- myWidget.open();
-    },false
-); //Event Cloudinary
+boton_foto.addEventListener("click",()=>{
+    widget_cloudinary.open();
+},false);
 
-window.addEventListener("load",function(event){
-    event.preventDefault();
-    if(this.localStorage.getItem("datos")!=null){
-        datos = JSON.parse(this.localStorage.getItem("datos"));
-        datos.forEach((r) => {
-         let= card = `<div class=col> <div class="card">
-         <img src=${r.img} class="card-img-top" alt="...">
-         <div class="card-body">
-           <h5 class="card-title">${r.name}</h5>
-           <h6 class="card-title">${r.section}</h5>
-           <p class="card-text">${r.description}</p>
-           <p class="card-text">${r.price}</p>
-           <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
-           
-         </div>
-       </div> 
-       </div> 
-       </br>`;
-            
-       if(r.section == "cabello"){
-         cuerpoHTMLHair.insertAdjacentHTML("beforeend",card);
-       }else if(r.section == "piel"){
-         cuerpoHTMLSkin.insertAdjacentHTML("beforeend",card);
-       }else{
-         cuerpoHTMLMakeUp.insertAdjacentHTML("beforeend",card);
-       };
-         
-       });//forEach
-    };//if
-    
-});//Window

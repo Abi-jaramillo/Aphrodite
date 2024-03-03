@@ -70,14 +70,14 @@ text-align: center;
 
 }
 
-#upload_widget{
+#btn-foto{
 
     background-color: #7ba05b;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight:bold;
     font-style:normal;
-    border-radius: 10%;
+    border-radius: 20 px;
     border:none;
     color: #FFFFFF;
     padding: 3px 10px;

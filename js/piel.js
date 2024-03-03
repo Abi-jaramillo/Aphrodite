@@ -39,3 +39,30 @@ addItem({'name':'Dúo de Pestañas y Cejas',
     'description':'Lash & Brow Dúo incluye dos sueros Multi-Peptide Lash and Brow más vendidos, porque cuando se trata de pestañas y cejas, nunca hay nada bueno que esté de más. Ayuda a nutrir y proteger las pestañas y las cejas mientras mejora la apariencia y densidad',
     'price': '$500'
   });
+
+  let mainProd = document.getElementById("list-itemsSkin")
+  window.addEventListener("load",function(event){
+    event.preventDefault();
+    if(this.localStorage.getItem("datos")!=null){
+        datos = JSON.parse(this.localStorage.getItem("datos"));
+        datos.forEach((r) => {
+         let= card = `<div class=col> <div class="card">
+         <img src=${r.img} class="card-img-top" alt="...">
+         <div class="card-body">
+           <h5 class="card-title">${r.name}</h5>
+           <h6 class="card-title">${r.section}</h5>
+           <p class="card-text">${r.description}</p>
+           <p class="card-text">${r.price}</p>
+           <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
+           
+         </div>
+       </div> 
+       </div> 
+       </br>`;
+       if(r.section === 'piel'){
+       itemsContainer.insertAdjacentHTML("beforeend",card);
+    };
+       
+    });//forEach
+};//if
+});
