@@ -60,7 +60,7 @@ addItem({'name':'Dúo de Pestañas y Cejas',
        </div> 
        </br>`;
        if(r.section === 'piel'){
-       itemsContainer.insertAdjacentHTML("beforeend",card);
+       mainProd.insertAdjacentHTML("beforeend",card);
     };
        
     });//forEach
