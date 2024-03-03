@@ -25,9 +25,19 @@ navbar.insertAdjacentHTML("beforeend", `
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../HTML/acercadenosotros.html">Nosotros</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../HTML/blog.html">Blog</a>
-                </li>
+                
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        Blog
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="../HTML/blog/puntosNegros.html">Puntos negros</a>
+                            <a class="dropdown-item" href="../HTML/blog/peeling.html">Peeling</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            
+                        </div>
+                    </div>
+                
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../HTML/administrador.html">Administrador</a>
                 </li>
