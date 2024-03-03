@@ -1,16 +1,47 @@
+p {
+  /* Teléfono */
+  font-size: 12px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+.card-text {
+  font-size: 22px;
+}
+}
+
+/* Desktop */
+@media (max-width: 1024px){
+.card-text {
+  font-size: 15px;
+}
+}
+
 .Visión {
   background-color: #f7e7ce;
-  /* Reemplaza "lightblue" con el nombre del color deseado */
-  padding: 40px;
-  /* Ajusta el relleno según tus preferencias */
+  padding: 20px;
 }
 
-/* Puedes agregar más estilos según sea necesario */
-
-.card-body-color {
+.card {
+  border: none;
   background-color: #f7e7ce;
-  /* Color de fondo específico para el card-body */
+
 }
+
+@media (max-width: 767px) {
+  .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+#primerImagen {
+  display: flex;
+  font-size: medium;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 .btnVisión {
@@ -86,8 +117,8 @@
 }
 
 .IMGFAVORITOS img {
-  max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
-  height: auto; /* Permite que la altura se ajuste automáticamente */
+  max-width: 100%; 
+  height: auto;
 }
 
 #LLEGADOS{
@@ -97,4 +128,23 @@
 
 .card {
   border: none;
+}
+
+#txtLosFavoritos {
+  display: flex;
+  align-items: center;
+}
+
+#losFavoritosCard {
+  background-color: #f7e7ce;
+}
+
+#btnComprar {
+  background-color: #7ba05b;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  border: none;
+  color: #FFFFFF;
 }

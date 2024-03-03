@@ -3,6 +3,25 @@
     padding: 0;
 }
 
+/* Teléfono */
+.card-text {
+    font-size: 12px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+.card-text {
+    font-size: 22px;
+}
+}
+
+/* Desktop */
+@media (max-width: 1024px){
+.card-text {
+    font-size: 15px;
+}
+}
+
 h1, h5 {
     font-family: "Alata", sans-serif;
     font-weight: 400;
@@ -34,6 +53,7 @@ p {
     
     margin-bottom: 30px;
 }
+
 .img2 img{
     height: 200px;
     border-top-right-radius: 15px;
