@@ -18,20 +18,20 @@ function addItem(item) {
 
 addItem({'name':'Shampoo',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_ShampooTeaTree_250ml_Haircare_1800x1800.jpg?v=1670532464',
-    'description':'Este Shampoo deja el cabello y el cuero cabelludo grasos purificado, vigorizado y con sensación de limpieza profunda. Contribuye a reequilibrar el exceso de grasa sin retirar la hidratación esencial del cabello',
+    'description':'Purifica tu cabello con este shampoo dejando una sensación de limpieza profunda. Ayuda a reequilibrar el exceso de grasa sin modificar la hidratación esencial del cabello',
     'price':'$260'});
 
 addItem({'name':'Acondicionador',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/Acondicionador_sin_enjuague_deAceite_de_RicinoNegro_Jamaicano_1_1800x1800.jpg?v=1678826719',
-    'description':'Esta crema hidratante suave pero intensa es justo lo que necesitas, ya que repone la humedad y reduce el encrespamiento',
+    'description':'Descubre el secreto para un cabello radiante, suave y sedoso con nuestro acondicionador. Revitaliza, fortalece y elimina el frizz',
     'price':'$260'});
 
 addItem({'name':'Mascarilla',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_MascarillaCapilarPlatano_240ml_Haircare_1800x1800.jpg?v=1670956529',
-    'description':' nutre intensamente el cabello de la raíz a las puntas, dejándolo más brillante al instante, combatiendo el frizz sin apelmazar el cabello',
+    'description':' Nutre intensamente el cabello desde la raíz hasta las puntas, combatiendo el frizz y dejándolo más brilloso y manejable',
     'price':'$180'});
     
 addItem({'name':'Cepillo',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_CepilloCuadradoDeBambooGrande_Accesorios_1800x1800.jpg?v=1667254507',
-    'description':'Cepillo ovalado de bambú grande',
+    'description':'Cepillo de cerdas gruesas fabricado a base de bambú',
     'price':'$90'});
