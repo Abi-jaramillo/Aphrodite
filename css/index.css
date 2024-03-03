@@ -1,25 +1,87 @@
 .Visión {
-    background-color: #f7e7ce; /* Reemplaza "lightblue" con el nombre del color deseado */
-    padding: 40px; 
-    /* Ajusta el relleno según tus preferencias */
-  }
-  
-  /* Puedes agregar más estilos según sea necesario */
-  
-  .card-body-color {
-    background-color: #f7e7ce; /* Color de fondo específico para el card-body */
+  background-color: #f7e7ce;
+  /* Reemplaza "lightblue" con el nombre del color deseado */
+  padding: 40px;
+  /* Ajusta el relleno según tus preferencias */
 }
 
-  
-  .btnVisión{
+/* Puedes agregar más estilos según sea necesario */
 
-    background-color: #7ba05b;
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight:bold;
-    font-style:normal;
-    border-radius: 10%;
-    border:none;
-    color: #FFFFFF;
-    padding: 3px 10px;
-  }
+.card-body-color {
+  background-color: #f7e7ce;
+  /* Color de fondo específico para el card-body */
+}
+
+
+.btnVisión {
+
+  background-color: #7ba05b;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 10%;
+  border: none;
+  color: #FFFFFF;
+  padding: 3px 10px;
+}
+
+#cuerpo {
+  background-color: #7ba05b;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+
+}
+
+#titulo {
+  padding: 50px;
+  font-family: "Alata";
+  text-align: center;
+}
+
+.ctext {
+  text-align: justify;
+  padding: 20px;
+}
+
+.card-img-top {
+  width: 400px;
+}
+
+#cajitas {
+  background-color: #fefefe;
+  width: 500px;
+  height: 100px;
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
+  font-family: "bellota";
+
+
+
+  border-width: 1px 4px 8px;
+
+}
+
+
+.columna-con-linea {
+  border-right: 1px solid #000;
+  padding-top: 3%;
+  display: table-cell;
+  vertical-align: middle;
+
+  padding-right: 5px;
+
+}
+
+
+.columna-con-linea:last-child {
+  border-right: none;
+}
+
+#pal {
+  display: flex;
+  font-size: medium;
+  align-items: center;
+  justify-content: center;
+
+}
