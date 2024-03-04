@@ -108,6 +108,12 @@
 
 .navbar-nav {
   font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+}
+
+.dropdown-toggle{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
 }
 
 #carrito1 {

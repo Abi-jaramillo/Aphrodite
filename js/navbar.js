@@ -28,7 +28,7 @@ navbar.insertAdjacentHTML("beforeend", `
                 
                     <div class="dropdown">
                         <button class="btn dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                        Blog
+                        <strong>Blog</strong>
                         </button>
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="../HTML/blog/puntosNegros.html">Puntos negros</a>
