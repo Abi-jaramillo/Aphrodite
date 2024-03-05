@@ -1,33 +1,35 @@
-simplyCountdown('#cuenta', { //se selecciona el id de cuenta
-    year: 2024, // required
-    month: 3, // required
-    day: 10, // required
-    hours: 13, // Default is 0 [0-23] integer
-    minutes: 0, // Default is 0 [0-59] integer
-    seconds: 0, // Default is 0 [0-59] integer
-    words: { //words displayed into the countdown
-        days: { singular: 'Día', plural: 'Días' },
-        hours: { singular: 'Hora', plural: 'Horas' },
-        minutes: { singular: 'Minuto', plural: 'Minutos' },
-        seconds: { singular: 'Segundo', plural: 'Segundos' }
-    },
-    plural: true, //use plurals
-    inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
-    inlineClass: 'simply-countdown-inline', //inline css span class in case of inline = true
-    // in case of inline set to false
-    enableUtc: false, //Use UTC or not - default : false
-    onEnd: function() { return; }, //Callback on countdown end, put your own function here
-    refresh: 1000, // default refresh every 1s
-    sectionClass: 'simply-section', //section css class
-    amountClass: 'simply-amount', // amount css class
-    wordClass: 'simply-word', // word css class
-    zeroPad: false,
-    countUp: false
-});
+const $dias = document.getElementById("dias");
+const $horas = document.getElementById("horas");
+const $minutos = document.getElementById("minutos");
+const $segundos = document.getElementById("segundos");
+const $finalMensaje = document.querySelector(".final-sms");
 
-// Also, you can init with already existing Javascript Object.
-let myElement = document.querySelector('.my-countdown');
-simplyCountdown(myElement, { /* options */ });
+//fecha futura
+const countdownDate = new Date("April 6, 2024 00:00:00").getTime();
 
-let multipleElements = document.querySelectorAll('.my-countdown');
-simplyCountdown(multipleElements, { /* options */ });
+let interval = setInterval(function() {
+    //para obtener la fecha actual en milisegundos
+    const now = new Date().getTime();
+    //obtener la diferencia entre ambas fechas
+
+    let diferenciaDias = countdownDate - now;
+
+    //calculos a días-horas-minutos-segundos
+    let days= Math.floor(diferenciaDias / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((diferenciaDias % (1000*60*60*24)) / (1000*60*60));
+    let minutes = Math.floor((diferenciaDias % (1000*60*60)) / (1000*60));
+    let seconds = Math.floor((diferenciaDias % (1000*60)) / (1000));
+
+    //Resultados
+    $dias.innerHTML=days;
+    $horas.innerHTML=hours;
+    $minutos.innerHTML=minutes;
+    $segundos.innerHTML=("0" + seconds).slice(-2);
+
+    //Para cuando llegue a cero
+    if(diferenciaDias < 0){
+        clearInterval(interval);
+        $finalMensaje.style.transform= "translateY(0)"
+    }
+
+},1000);

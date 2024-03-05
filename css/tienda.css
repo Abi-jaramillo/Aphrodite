@@ -25,7 +25,18 @@
     font-size:30px;
     color:black;
   }
-
+.secciones-title{
+    color:#7BA05B;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 3rem;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 4rem;
+}
   .container{
     width: 100%;
     height: 100vh;
@@ -79,4 +90,11 @@
 .img-box:hover h3{
     opacity: 1;
     bottom: 25px;
+}
+
+#slide{
+    background-color: #000000;
+    height: 0.5rem;
+    width: 1rem;
+    border-radius: 20%;
 }
