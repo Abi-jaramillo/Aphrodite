@@ -20,59 +20,44 @@
 </head>
 
 <body>
-    <header id="navbar"></header>
-    <div class="grid-container bg-imagecontacto">
-        <div class="card" style="width: 30rem; ">
-            <div class="card-body">
-                <h1 class="card-title text-center">Regístrate</h1>
-                <form>
-                    <fieldset>
-                        <legend class="text-center">Ingrese sus datos</legend>
-                        <div class="alert alert-danger fade show" style="display:none;" role="alert"
-                            id="alertValidaciones">
-                            <p id="alertValidacionesTexto"></p>
-                        </div>
-                        <!-- Nombre -->
-                        <div class="mb-3">
-                            <label for="TextInput" class="txtNombre">Nombre </label>
-                            <input type="text" id="Nombre" class="form-control" placeholder="Nombre completo">
-                        </div>
-                        <!-- Email -->
-                        <div class="mb-3">
-                            <label for="TextInput" class="txtCorreo" style="text-align: start;">Email</label>
-                            <input type="email" id="Correo" class="form-control" placeholder="email@domain.com">
-                        </div>
-                        <!-- Telefono -->
-                        <div class="mb-3">
-                            <label for="TextInput" class="txtTelefono">Teléfono </label>
-                            <input type="text" id="Telefono" class="form-control" placeholder="5555555555"
-                                maxlength="10">
-                        </div>
-                        <!--Contraseña-->
-                        <div class="mb-3">
-                            <label for="TextInput" class="txtContrasena">Contraseña</label>
-                            <input type="text" id="contrasena" class="form-control" placeholder="Contraseña">
-                        </div>
-                        <!--Confirma Contraseña-->
-                        <div class="mb-3">
-                            <label for="TextInput" class="txtConfirmaContrasena"> Confirma tu contraseña</label>
-                            <input type="text" id="confirmaContrasena" class="form-control"
-                                placeholder="Confirma tu contraseña">
-                        </div>
-                        <!--Botón-->
-                        <div class="btn-container">
-                            <button type="submit" id="btnEnviar" class="btnEnviarClass">Registrar</button>
-                            <button type="reset" id="btnClear" class="btnLimpiarClass">Limpiar</button>
-                        </div>
-                    </fieldset>
-                </form>
+    <div class="container">
+        <div class="container-form">
+            <form class="sign-in">
+                <h2 class="title">Inicia sesión</h2>
+                <span>Use su correo y contraseña</span>
+                <div class="container-input">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <input type="text" placeholder="Correo electrónico">
+                </div>
+                <div class="container-input">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="text" placeholder="Contraseña">
+                </div>
+                <button class="btn">Iniciar sesión</button>
+            </form>
+        </div>
+        <div class="container-form">
+            <form class="sign-up"></form>
+            <h2 class="title">Regístrate</h2>
+            <span class="text">Use su correo electrónico para registrarse</span>
+            <div class="container-input">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" placeholder="Nombre">
             </div>
+            <div class="container-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" placeholder="Correo electrónico">
+            </div>
+            <div class="container-input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" placeholder="Contraseña">
+            </div>
+            <button class="btn">Regístrate</button>
         </div>
     </div>
-    </br>
 
-    </br>
-    <div id="footer"></div>
+    <button>Regístrate</button>
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
@@ -82,6 +67,8 @@
 
     <script src="../js/navbar.js" defer></script>
     <script src="../js/footer.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
