@@ -3,6 +3,19 @@ p {
   font-size: 12px;
 }
 
+.titles{
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.texts{
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:bold;
+  font-style: normal;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .card-text {
@@ -119,15 +132,12 @@ p {
   font-size: medium;
 }
 
-
-
 .IMGFAVORITOS img {
   max-width: 100%;
   height: auto;
 }
 
 #LLEGADOS {
-  font-size: 30px;
   color: #7ba05b;
 }
 
