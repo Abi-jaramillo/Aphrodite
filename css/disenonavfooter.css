@@ -137,6 +137,28 @@
   
 }
 
+#login {
+  display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    color: #7ba05b;
+    font-size: 25px;
+    margin: 5px 5px;
+    transition: all 0.6s ease-in-out;
+    background: #f7e7ce;
+    
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+
+#login:hover {
+ 
+  transform: translateY(-10px);
+}
+
+
 .nav-item{
   font-family: "Alata", sans-serif;
     font-weight: bold;

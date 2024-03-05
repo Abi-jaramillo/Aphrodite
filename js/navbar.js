@@ -40,7 +40,8 @@ navbar.insertAdjacentHTML("beforeend", `
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../HTML/administrador.html">Administrador</a>
                 </li>
-                
+               
+                <a href="/HTML/login.html" target="_blank"><i id="login" class="bi bi-person-circle"></i></a>
                 <a href="#" target="_blank"><i id="carrito1" class="bi bi-cart3"></i></a>
             </ul>
             
