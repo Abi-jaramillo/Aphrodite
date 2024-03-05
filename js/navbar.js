@@ -31,10 +31,10 @@ navbar.insertAdjacentHTML("beforeend", `
                       <strong>Blog</strong>
                       </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="../HTML/blog/puntosNegros.html">Puntos negros</a></li>
-                            <li><a class="dropdown-item" href="../HTML/blog/peeling.html">Peeling</a></li>
+                            <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
+                            <li><a class="dropdown-item" href="/HTML/peeling.html">Peeling</a></li>
+                            <li><a class="dropdown-item" href="/HTML/cuidadocabello.html">Cuidado cabello</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            
                         </ul>
                 </li>
                                                     
