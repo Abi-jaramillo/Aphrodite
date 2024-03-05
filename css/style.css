@@ -1,24 +1,45 @@
 *{
-    margin: 0;
+    margin:0;
     padding: 0;
 }
-
+body{
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 /* Teléfono */
 .card-text {
-    font-size: 12px;
+    font-size: 15px;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
 .card-text {
-    font-size: 22px;
+    font-size: 20px;
 }
 }
 
 /* Desktop */
 @media (max-width: 1024px){
 .card-text {
+    font-size: 22px;
+}
+}
+/* Teléfono */
+li {
     font-size: 15px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+li {
+    font-size: 20px;
+}
+}
+
+/* Desktop */
+@media (max-width: 1024px){
+li {
+    font-size: 22px;
 }
 }
 

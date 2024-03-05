@@ -25,17 +25,19 @@ navbar.insertAdjacentHTML("beforeend", `
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../HTML/acercadenosotros.html">Nosotros</a>
                 </li>
-                <!--Blog menu-->
+                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Blog
-                    </a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="../HTML/blog/puntosNegros.html">Prevenir puntos negros</a>
-                        <a class="dropdown-item" href="../HTML/blog/peeling.html">Beneficios del peeling</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <strong>Blog</strong>
+                    </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
+                            <li><a class="dropdown-item" href="/HTML/peeling.html">Peeling</a></li>
+                            <li><a class="dropdown-item" href="/HTML/cuidadocabello.html">Cuidado cabello</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
                 </li>
+                                                    
                 <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="../HTML/administrador.html">Administrador</a>
                 </li>

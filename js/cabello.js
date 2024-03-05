@@ -19,7 +19,19 @@ function addItem(item) {
 }
 
 
-addItem({'name':'Shampoo',
+addItem({'name':'Kit Pro-Reconstrucción',
+    'section':'Cabello',
+    'img':'https://production.na01.natura.com/on/demandware.static/-/Sites-nat-mex-b2b2c-catalog/default/dw49370b91/6070_1.jpg',
+    'description':'Kit para cabellos químicamente dañados. Proporciona fuerza y resistencia, además de que ofrece un reequilibrio de la fibra capilar',
+    'price':'$220'});
+
+addItem({'name':'Shampoo 2 en 1',
+    'section':'Cabello',
+    'img':'https://production.na01.natura.com/on/demandware.static/-/Sites-nat-mex-b2b2c-catalog/default/dw27bd57e1/78904_1.jpg',
+    'description':'Shampoo 2 en 1 ideal para uso diario y todo tipo de cabello. Contiene manteca de cacao y complejos vitamínicos',
+    'price':'$130'});
+
+addItem({'name':'Shampoo hidratante',
     'section':'Cabello',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_ShampooTeaTree_250ml_Haircare_1800x1800.jpg?v=1670532464',
     'description':'Purifica tu cabello con este shampoo dejando una sensación de limpieza profunda. Ayuda a reequilibrar el exceso de grasa sin modificar la hidratación esencial del cabello',
@@ -42,6 +54,7 @@ addItem({'name':'Cepillo',
     'img':'https://www.thebodyshop.mx/cdn/shop/products/TBS_CepilloCuadradoDeBambooGrande_Accesorios_1800x1800.jpg?v=1667254507',
     'description':'Cepillo de cerdas gruesas fabricado a base de bambú',
     'price':'$90'});
+
 
   
 let mainProd= document.getElementById("list-itemsHair");    

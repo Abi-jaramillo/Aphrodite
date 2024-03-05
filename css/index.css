@@ -135,6 +135,9 @@ p {
   border: none;
 }
 
+#favoritosCarousel{
+  margin-bottom: 10px;
+}
 #txtLosFavoritos {
   display: flex;
   align-items: center;
@@ -153,3 +156,113 @@ p {
   border: none;
   color: #FFFFFF;
 }
+
+.oferta {
+  background-color: #7ba05b;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.texto-oferta{
+  font-family: "Quicksand", sans-serif;
+  justify-content: flex-start;
+}
+
+.texto-oferta-2{
+  display: flex;
+  justify-content: end;
+  text-align:justify;
+
+}
+.btn-oferta{
+  display:flex;
+  justify-content: center;
+  text-decoration: none;
+  
+}
+.card-oferta{
+  margin-left: 1rem;
+}
+.card-oferta>a{
+  display:flex;
+  justify-content: center;
+}
+.imagen-oferta{
+  display: flex;
+  justify-content:center;
+}
+
+.imagen-oferta>img{
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  margin: 1rem 1rem;
+}
+.container-cuenta{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.countdown{
+  display:flex;
+  justify-content: space-evenly;
+  width:100%;
+  flex-wrap: wrap;
+}
+
+.countdown div{
+  display: flex;
+  justify-content: center;
+  padding:10px;
+
+}
+
+.countdown p{
+  display: flex;
+  justify-content: center;
+  border: solid 1px #fefefe;
+  height: 50px;
+  width: 50px;
+  color:#000;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  background-color: #fefefe;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.719);
+}
+
+.countdown span{
+  display: block;
+  padding: 10px;
+  text-align: center;
+  color: #000;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+
+}
+
+/*.final-sms{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: grid;
+  place-items:center;
+  color:#fefefe;
+  font-family: "Abril Fatface", serif;
+  font-size: 4rem;
+  font-weight: bold;
+  transition: 0.5s;
+  background-color: #7ba05b;
+  transform: translateY(-100%);
+}*/
+

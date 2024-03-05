@@ -2,12 +2,29 @@
 *{
     /* font-size: 2vw; */
     margin-top: 1px;
+    font-weight: bold;
+    font-family: "Quicksand", sans-serif;
 }
 
+.bg-imagecontacto {
+    background-image: url(../src/images/Fondo\ de\ hojas.png);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-imagecontacto2 {
+    background-image: url(../src/images/Fondo\ de\ hojas.png);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-size: cover;
+    background-position: center center;
+}
 .card-title {font-family: "Alata", sans-serif;
-font-weight: 400;
-font-style: normal;
-text-align: center;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
 }
 
 .txtNombre {
@@ -15,6 +32,14 @@ text-align: center;
     font-optical-sizing: auto;
     font-weight:bold;
     font-style:normal;
+}
+
+.boton {
+    padding: .5rem 1rem;
+    border-radius: 15px;
+}
+.boton:last-child {
+    justify-content: end;
 }
 
 .btnEnviarClass {
@@ -41,6 +66,7 @@ text-align: center;
     
 }
 
+
 .form-control, .form-select {
     background-color: #f7e7ce;
     font-family: "Quicksand", sans-serif;
@@ -63,12 +89,12 @@ text-align: center;
     justify-content: space-around;
 }
 
-@media (min-width: 350px){
+/*@media (min-width: 350px){
     .card{
         width: auto;
     }
 
-}
+}*/
 
 #btn-foto{
 

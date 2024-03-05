@@ -43,12 +43,12 @@ btnEnviar.addEventListener("click", function (event) {
 
     let hayError = false;
 
-    if (txtTelefono.value.length < 10) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> ingresado no es correcto <br/>`);
-        alertValidaciones.style.display = "block";
-        txtTelefono.style.border = "solid red thin";
-        hayError=true;
-    } //alert("El teléfono debe tener 10 dígitos.");
+    //if (txtTelefono.value.length < 10) {
+      //  alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> ingresado no es correcto <br/>`);
+        //alertValidaciones.style.display = "block";
+        //txtTelefono.style.border = "solid red thin";
+        //hayError=true;
+    //} //alert("El teléfono debe tener 10 dígitos.");
 
     if (txtCorreo.value.length < 3 ) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
@@ -82,7 +82,7 @@ btnEnviar.addEventListener("click", function (event) {
         hayError=true;
     }
 
-    if(! regex.test(txtTelefono.value) || /^(.)\1+$/.test(txtTelefono.value)) {  //se agregó la condición de la expresión regular que no acepta ceros consecutivos
+    if(! regex.test(txtTelefono.value) || /^(.)\1+$/.test(txtTelefono.value) || (txtTelefono.value.length < 10)) {  //se agregó la condición de la expresión regular que no acepta ceros consecutivos
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> Número telefónico </strong> tiene un formato incorrecto <br/>`);
         alertValidaciones.style.display = "block";
         txtTelefono.style.border = "solid red thin";
