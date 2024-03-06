@@ -37,22 +37,35 @@
             </form>
         </div>
         <div class="container-form">
+            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+                <p id="alertValidacionesTexto"></p>
+              </div>
             <form class="sign-up"></form>
             <h2 class="title">Regístrate</h2>
             <span class="text">Use su correo electrónico para registrarse</span>
             <div class="container-input">
                 <ion-icon name="person-outline"></ion-icon>
-                <input type="text" placeholder="Nombre">
+                <input type="text" placeholder="Nombre" id="Nombre">
             </div>
             <div class="container-input">
                 <ion-icon name="mail-outline"></ion-icon>
-                <input type="text" placeholder="Correo electrónico">
+                <input type="text" placeholder="Correo electrónico" id="Correo">
+            </div>
+            <div class="container-input">
+                <ion-icon name="mail-outline"></ion-icon>
+                <input type="text" placeholder="Teléfono" id="Telefono">
             </div>
             <div class="container-input">
                 <ion-icon name="lock-closed-outline"></ion-icon>
-                <input type="text" placeholder="Contraseña">
+                <input type="text" placeholder="Contraseña" id="Contrasena">
             </div>
-            <button class="btn">Regístrate</button>
+            <div class="container-input">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="text" placeholder="Confirma Contraseña" id="Contrasena1">
+            </div>
+            <button class="btn" id="btnRegistrarse">Regístrate</button>
+
+            <button class="btn" id="btnClear">Limpiar</button>
         </div>
     </div>
 
