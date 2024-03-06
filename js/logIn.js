@@ -12,6 +12,9 @@ let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertConfirmaciones = document.getElementById("alertConfirmaciones");
 let alertConfirmacionesTexto = document.getElementById("alertConfirmacionesTexto");
 
+let container = document.querySelector(".container");
+let btnSignIn = document.getElementById("btn-sign-in");
+let btnSignUp = document.getElementById("btn-sign-up");
 //Se agregaron las excepciones de simbolos que no deben estar en correo
 let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
@@ -126,7 +129,13 @@ function validarCorreo(correo) {
     return expReg.test(correo);
 }//validarCorreo
 
+btnSignIn.addEventListener("click",()=>{
+    container.classList.remove("toggle");
+});
 
+btnSignUp.addEventListener("click",()=>{
+    container.classList.add("toggle");
+});
 
  
 
