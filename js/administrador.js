@@ -9,6 +9,7 @@ const imagen = document.querySelector("#user-foto");
 let img = document.querySelector("#user-foto");
 
 
+
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 

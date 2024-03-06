@@ -6,11 +6,13 @@ let btnClear = document.getElementById ("btnClear");
 let txtContrasena1 = document.getElementById("Contrasena1");
 let txtContrasena2 = document.getElementById("Contrasena2");
 
+
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
 let alertConfirmaciones = document.getElementById("alertConfirmaciones");
 let alertConfirmacionesTexto = document.getElementById("alertConfirmacionesTexto");
+
 
 let container = document.querySelector(".container");
 let btnSignIn = document.getElementById("btn-sign-in");
@@ -19,6 +21,8 @@ let btnSignUp = document.getElementById("btn-sign-up");
 let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
 let regexContraseña = (/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])([A-Za-z\d$@$!%?&]|[^ ]){8,15}$/)
+let storedData =localStorage.getItem("informacion");
+let info = new Array();
 //alerta Validación 
 btnRegistrarse.addEventListener("click", function (event) {
     event.preventDefault();
@@ -90,6 +94,17 @@ btnRegistrarse.addEventListener("click", function (event) {
         hayError=false;
     }
 
+    if (!hayError){
+        let usuario=`{"Nombre":"${txtNombre.value}", 
+                        "Telefono":"${ txtTelefono.value }",
+                        "Correo":"${txtCorreo.value}",
+                        "Contraseña":"${txtContrasena1.value}"}`;
+                                        
+    
+    info.push(JSON.parse(usuario));
+    localStorage.setItem("informacion",JSON.stringify(info));
+   
+    }
                 txtNombre.value="";
                 txtTelefono.value="";
                 txtCorreo.value="";
@@ -139,4 +154,15 @@ btnSignUp.addEventListener("click",()=>{
 
  
 
+window.addEventListener("load", function(event){
+    event.preventDefault();
 
+    
+
+
+    if (this.localStorage.getItem("informacion") !==null){
+        info=JSON.parse(this.localStorage.getItem("informacion"));
+   
+        console.log (info);
+    } 
+});
