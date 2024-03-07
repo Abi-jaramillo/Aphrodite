@@ -1,5 +1,5 @@
 let nombreProducto = document.getElementById("NombreProducto");
-let txtCategoria = document.getElementById("Categoria");
+let txtCategoria = document.getElementById("deselectSelect");
 let txtPrecio = document.getElementById ("Precio");
 let txtInput = document.getElementById("TextInput");
 let btnEnviar = document.getElementById("btnEnviar");
@@ -44,13 +44,13 @@ btnEnviar.addEventListener("click", function (event) {
         existError=true;
     } //alert("El precio debe tener más de 1 dígito.");
 
-    if (txtCategoria.value.length < 3 ) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `No se encontró esa <strong> categoría </strong> <br/>`);
-        alertValidaciones.style.display = "block";
-        txtCategoria.style.border = "solid red thin";
-        existError=true;
+    // if (txtCategoria.value.length < 3 ) {
+    //     alertValidacionesTexto.insertAdjacentHTML("beforeend", `No se encontró esa <strong> categoría </strong> <br/>`);
+    //     alertValidaciones.style.display = "block";
+    //     txtCategoria.style.border = "solid red thin";
+    //     existError=true;
             
-    }//alert 
+    // }//alert 
         
     
     if (nombreProducto.value.length < 5) {
@@ -101,6 +101,7 @@ btnEnviar.addEventListener("click", function (event) {
                 txtPrecio.value="";
                 txtCategoria.value="";
                 txtInput.value="";
+                //imagen="";
                 nombreProducto.focus();
 
 });
@@ -142,3 +143,12 @@ boton_foto.addEventListener("click",()=>{
     widget_cloudinary.open();
 },false);
 
+
+window.addEventListener("load", function(event){
+    event.preventDefault();  
+
+    if (this.localStorage.getItem("datos") !=null){
+        datos=JSON.parse(this.localStorage.getItem("datos"));
+        console.log (datos);
+    } 
+});

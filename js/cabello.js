@@ -67,7 +67,7 @@ window.addEventListener("load",function(event){
        <img src=${r.img} class="card-img-top" alt="...">
        <div class="card-body">
          <h5 class="card-title">${r.name}</h5>
-         <h6 class="card-title">${r.section}</h6>
+         <h6 class="card-title">Cabello</h6>
          <p class="card-text">${r.description}</p>
          <p class="card-text">${r.price}</p>
          <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
@@ -76,7 +76,7 @@ window.addEventListener("load",function(event){
      </div> 
      </div> 
      </br>`;
-     if(r.section === 'cabello'){
+     if(r.section === '1'){
       mainProd.insertAdjacentHTML("beforeend",card);
   };
      

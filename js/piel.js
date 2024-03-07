@@ -50,7 +50,7 @@ addItem({'name':'Dúo de Pestañas y Cejas',
          <img src=${r.img} class="card-img-top" alt="...">
          <div class="card-body">
            <h5 class="card-title">${r.name}</h5>
-           <h6 class="card-title">${r.section}</h5>
+           <h6 class="card-title">Piel</h5>
            <p class="card-text">${r.description}</p>
            <p class="card-text">${r.price}</p>
            <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
@@ -59,7 +59,7 @@ addItem({'name':'Dúo de Pestañas y Cejas',
        </div> 
        </div> 
        </br>`;
-       if(r.section === 'piel'){
+       if(r.section === '2'){
        mainProd.insertAdjacentHTML("beforeend",card);
     };
        

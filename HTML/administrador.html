@@ -44,13 +44,18 @@
             </div>
             <!-- categoria -->
             <div class="mb-3">
-              <label for="TextInput" class="txtCategoria" style="text-align: start;">Categoría</label>
-              <input type="text" id="Categoria" class="form-control" placeholder="Categoría">
+              <label for="TextInput" class="form-label">Seleccione la categoría</label>
+              <label for="deselectSelect" class="form-label"></label>
+              <select id="deselectSelect" class="form-select">
+                <option value="1"> Cabello</option>
+                <option value="2"> Piel</option>
+                <option value="3"> Maquillaje</option>
+               </select>
             </div>
             <!-- precio -->
             <div class="mb-3">
               <label for="TextInput" class="txtPrecio">Precio </label>
-              <input type="text" id="Precio" class="form-control" placeholder="$00.00" maxlength="10">
+              <input type="text" id="Precio" class="form-control" placeholder="$000.00" maxlength="10">
             </div>
             
             <!--Botón para subir imagen-->
