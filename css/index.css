@@ -1,13 +1,27 @@
+
+
+/* Estilos para h1 y h5 */
+h1, h5 {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: #333; /* Agrega color si es necesario */
+}
+
+/* Otros estilos... */
+
+
 p {
   /* Teléfono */
   font-size: 12px;
 }
 
-.titles{
+/*.titles{
   font-family: "Alata", sans-serif;
   font-weight: 400;
   font-style: normal;
-}
+}*/
 
 .texts{
   font-family: "Quicksand", sans-serif;
@@ -33,6 +47,7 @@ p {
 .Visión {
   background-color: #f7e7ce;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .card {
@@ -48,16 +63,28 @@ p {
   }
 }
 
-#primerImagen {
+/*#primerImagen {
   display: flex;
   font-size: medium;
   align-items: center;
   justify-content: center;
-}
+}*/
 
 .btnVisión {
 
-  background-color: #7ba05b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 5px 5px;
+  border: #7ba05b;
+  transition: all 0.25s ease-in-out;
+  background: #7ba05b;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+  /*background-color: #7ba05b;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -66,10 +93,26 @@ p {
   border: none;
   color: #FFFFFF;
   padding: 3px 10px;
+  align-items: center;
+  
+  background-color: #7ba05b;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    border: none;
+    color: #FFFFFF;*/
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px; /* Ajusta según sea necesario */
 }
 
 #cuerpo {
-  background-color: #7ba05b;
+  background-color: #f7e7ce;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -78,26 +121,26 @@ p {
 
 }
 
-.card-img-top {
+/*.card-img-top {
   max-width: 65%;
   height: auto;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-}
+}*/
 
-#titulo {
+/*#titulo {
   padding: 20px;
   font-family: "Alata";
   text-align: center;
-}
+}*/
 
 .ctext {
   text-align: justify;
   padding: 20px;
 }
 
-#cajitas {
+/*#cajitas {
   background-color: #fefefe;
   width: 60%;
   box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
@@ -111,17 +154,23 @@ p {
   justify-content: center;
   align-content: center;
 }
+*/
 
 .columna-con-linea {
-  border-right: 1px solid #000;
-  padding: 10px;
-  text-align: center;
-  flex-grow: 1;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 5px 5px;
+  border: #7ba05b;
+  transition: all 0.25s ease-in-out;
+  background: #7ba05b;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
-.columna-con-linea:last-child {
-  border-right: none;
-}
 
 #pal {
   font-size: medium;
@@ -130,6 +179,7 @@ p {
 .IMGFAVORITOS img {
   max-width: 100%;
   height: auto;
+  border-radius: 20px;
 }
 
 #LLEGADOS {
@@ -137,7 +187,20 @@ p {
 }
 
 .card {
-  border: none;
+  border: ;
+}
+
+#visionCarrousel{
+  margin-bottom: 10px;
+}
+
+#carousel-item img{
+  width: 100%;
+  display: flex;
+}
+
+#carousel-item {
+  
 }
 
 #favoritosCarousel{
@@ -150,16 +213,21 @@ p {
 
 #losFavoritosCard {
   background-color: #f7e7ce;
+  border-radius: 20px;
 }
 
 #btnComprar {
-  background-color: #7ba05b;
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  border: none;
-  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 20px;
+  margin: 5px 5px;
+  border: #7ba05b;
+  transition: all 0.25s ease-in-out;
+  background: #7ba05b;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
 .oferta {
@@ -167,13 +235,13 @@ p {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
-.texto-oferta{
+/*.texto-oferta{
   font-family: "Quicksand", sans-serif;
   justify-content: flex-start;
-}
+}*/
 
 .texto-oferta-2{
   display: flex;
@@ -189,6 +257,7 @@ p {
 }
 .card-oferta{
   margin-left: 1rem;
+  
 }
 .card-oferta>a{
   display:flex;
@@ -270,4 +339,31 @@ p {
   background-color: #7ba05b;
   transform: translateY(-100%);
 }*/
+
+.visionImagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+#LLEGADOS {
+  color: #7ba05b;
+}
+
+.card {
+  border: ;
+}
+
+#favoritosCarousel{
+  margin-bottom: 10px;
+}
+#txtLosFavoritos {
+  display: flex;
+  align-items: center;
+}
+
+#losFavoritosCard {
+  background-color: #f7e7ce;
+  border-radius: 20px;
+}
 
