@@ -56,16 +56,16 @@
                     <input type="text" placeholder="Email" id="Correo">
                 </div>
                 <div class="container-input">
-                    <ion-icon name="mail-outline"></ion-icon>
+                    <ion-icon name="call-outline"></ion-icon>
                     <input type="text" placeholder="Teléfono" id="Telefono">
                 </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Contraseña" id="Contrasena1" maxlength="8">
+                    <input type="password" placeholder="Contraseña" id="Contrasena1" minlength="8">
                 </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Confirma contraseña" id="Contrasena2">
+                    <input type="password" placeholder="Confirma contraseña" id="Contrasena2" minlength="8">
                 </div>
                 <button class="btn button" id="btnRegistrarse">Regístrate</button>
 
@@ -102,6 +102,7 @@
     <script src="./js/footer.js"></script>-->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

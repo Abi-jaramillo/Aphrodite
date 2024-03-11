@@ -20,7 +20,8 @@ let btnSignUp = document.getElementById("btn-sign-up");
 //Se agregaron las excepciones de simbolos que no deben estar en correo
 let expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
 let regex = new RegExp ("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")
-let regexContraseña = (/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])([A-Za-z\d$@$!%?&]|[^ ]){8,15}$/)
+let regexContrasena = (/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])([A-Za-z\d$@$!%?&]|[^ ]){8,15}$/)
+
 let storedData =localStorage.getItem("informacion");
 let info = new Array();
 //alerta Validación 
@@ -71,7 +72,7 @@ btnRegistrarse.addEventListener("click", function (event) {
         
     } 
 
-    if((txtContrasena1.value.lenght<8) && !regexContraseña.test(txtContrasena1.value)){
+    if((txtContrasena1.value.lenght<8) && regexContrasena.test(txtContrasena1.value)){
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> Contraseña </strong> 
         debe tener: <br> -Mínimo <strong>8</strong> caracteres y máximo <strong>15</strong>. <br>
         -Una letra mayúscula y mínimo una minuscula. <br> -Al menos un número y un carácter especial. <br>`);
@@ -80,30 +81,28 @@ btnRegistrarse.addEventListener("click", function (event) {
         hayError=true;
     }
 
-    if(txtContrasena1.value !=txtContrasena2.value){
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> 
-        no coinciden <br>`);
-        alertValidaciones.style.display = "block";
-        txtContrasena1.style.border = "solid red thin";
-        txtContrasena2.style.border = "solid red thin";
-        hayError=true;
-    } else { alertConfirmacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> coinciden <br>`);
-        alertConfirmaciones.style.display = "block";
-        txtContrasena1.style.border = "solid green thin";
-        txtContrasena2.style.border = "solid green thin";
-        hayError=false;
-    }
-
     if (!hayError){
         let usuario=`{"Nombre":"${txtNombre.value}", 
                         "Telefono":"${ txtTelefono.value }",
                         "Correo":"${txtCorreo.value}",
                         "Contraseña":"${txtContrasena1.value}"}`;
                                         
-    
+    let correoRegistrado = info.find(usuario => usuario.Correo === txtCorreo.value)
+    if (correoRegistrado){
+        return Swal.fire({
+            title: "¡Ops!",
+            text: "Este usuario ya está registrado",
+            icon: "error"
+          });
+    }
+
     info.push(JSON.parse(usuario));
     localStorage.setItem("informacion",JSON.stringify(info));
-   
+    Swal.fire({
+        title: "¡Felicidades!",
+        text: "Registro exitóso",
+        icon: "success"
+    });
     }
                 txtNombre.value="";
                 txtTelefono.value="";
@@ -165,4 +164,5 @@ window.addEventListener("load", function(event){
    
         console.log (info);
     } 
+
 });

@@ -5,7 +5,7 @@ const $segundos = document.getElementById("segundos");
 const $finalMensaje = document.querySelector(".final-sms");
 
 //fecha futura
-const countdownDate = new Date("April 6, 2024 00:00:00").getTime();
+const countdownDate = new Date("March 30, 2024 00:00:00").getTime();
 
 let interval = setInterval(function() {
     //para obtener la fecha actual en milisegundos
