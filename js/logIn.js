@@ -5,6 +5,9 @@ let btnRegistrarse = document.getElementById("btnRegistrarse");
 let btnClear = document.getElementById ("btnClear");
 let txtContrasena1 = document.getElementById("Contrasena1");
 let txtContrasena2 = document.getElementById("Contrasena2");
+let btnInicio = document.getElementById("btnIniciar");
+let emailInicio = document.getElementById("emailInicio");
+let passInicio = document.getElementById("passInicio");
 
 
 let alertValidaciones = document.getElementById("alertValidaciones");
@@ -134,6 +137,27 @@ btnClear.addEventListener("click", function(event){
 
 });
 
+btnInicio.addEventListener("click",function(event){
+    event.preventDefault();
+    let validaInicio = info.find(usuario => usuario.Correo === emailInicio.value && usuario.Contraseña === passInicio.value)
+    if(!validaInicio){
+        return Swal.fire({
+            title: "¡Ops!",
+            text: "¡Usuario y/o contraseña incorrectos!",
+            icon: "error"
+          });
+    }
+
+    Swal.fire({
+        title: "¡Bienvenido!",
+        text: `${validaInicio.Nombre}`,
+        icon: "success"
+    });
+    window.location.href = "index.html"
+
+    
+
+});
 
 function validarNombre() {
     return txtNombre.value.length >= 3;
