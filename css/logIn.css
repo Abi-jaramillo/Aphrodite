@@ -14,6 +14,7 @@ body{
     
 }
 
+
 .Aphrodite{
     font-family: "Abril Fatface", serif;
     font-weight: 400;
@@ -35,6 +36,14 @@ body{
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;   
 }
+/*
+@media min-width(768px) {
+    .container{display:none;}
+    .mobile{
+        display: flex;
+        flex-direction: column;
+    }
+}*/
 
 .container{
     width: 800px;
@@ -44,7 +53,7 @@ body{
     background-color: white;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 0 10px rgb(0, 0,0,0.3)
+    box-shadow: 0 0 10px rgb(0, 0,0,0.3);
 }
 .container-form{
     width: 100%;
@@ -157,16 +166,20 @@ body{
     text-align: center;
 }
 .container-welcome .button{
-    border: 2px solid white;
-    
+    border: 2px solid white;   
 }
 
 .container.toggle .welcome-sign-in{
     transform: translateX(0);
-   
 }
 .container.toggle .welcome-sign-up{
     transform: translateX(-100%);
+}
+
+.alert{
+    position: fixed;
+    z-index: 100;
+    font-size: smaller;
 }
 
 
