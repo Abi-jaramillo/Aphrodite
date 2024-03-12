@@ -75,13 +75,24 @@ btnRegistrarse.addEventListener("click", function (event) {
         
     } 
 
-    if((txtContrasena1.value.lenght<8) && regexContrasena.test(txtContrasena1.value)){
+    if (txtContrasena1.value.length < 8 || !regexContrasena.test(txtContrasena1.value)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> Contraseña </strong> 
         debe tener: <br> -Mínimo <strong>8</strong> caracteres y máximo <strong>15</strong>. <br>
-        -Una letra mayúscula y mínimo una minuscula. <br> -Al menos un número y un carácter especial. <br>`);
+        -Una letra mayúscula y mínimo una minúscula. <br> -Al menos un número y un carácter especial. <br>`);
         alertValidaciones.style.display = "block";
         txtContrasena1.style.border = "solid red thin";
-        hayError=true;
+        hayError = true;
+    } else if (txtContrasena1.value !== txtContrasena2.value) {
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> 
+        no coinciden <br>`);
+        alertValidaciones.style.display = "block";
+        txtContrasena1.style.border = "solid red thin";
+        txtContrasena2.style.border = "solid red thin";
+        hayError = true;
+    } else {
+        alertConfirmacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> coinciden <br>`);
+        alertConfirmaciones.style.display = "block";
+        hayError = false;
     }
 
     if (!hayError){
