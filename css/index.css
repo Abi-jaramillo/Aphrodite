@@ -32,7 +32,6 @@
 
 .titles3{
   font-family: "Alata", sans-serif;
-  color: wh;
   font-weight: 400;
   font-style: normal;
 }
@@ -74,7 +73,7 @@
     flex: 0 0 50%;
     max-width: 50%;
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: center;
   }
 }
 
@@ -83,14 +82,14 @@
     flex: 0 0 100%;
     max-width: 100%;
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: center;
   }
 }
 
 @media (max-width: 991px) {
   .col-md-6 img {
-    width: 100%; /* Adjust image width to fill the container */
-    max-width: none; /* Allow image to be larger than its original size */
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -112,13 +111,13 @@
     font-weight: bold;
     font-style: normal;
     border: none;
-    color: #FFFFFF;*/
-
+    color: #FFFFFF;
+}
 
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 15px; /* Ajusta según sea necesario */
+  margin-top: 15px;
 }
 
 #contMejorTienda {
@@ -131,7 +130,7 @@
 
 }
 
-/*.card-img-top {
+.card-img-top {
   max-width: 65%;
   height: auto;
   display: flex;
