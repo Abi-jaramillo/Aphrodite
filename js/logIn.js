@@ -96,7 +96,7 @@ btnRegistrarse.addEventListener("click", function (event) {
             title: "¡Ops!",
             text: "Este usuario ya está registrado",
             icon: "error"
-          });
+    });
     }
 
     info.push(JSON.parse(usuario));
@@ -145,7 +145,7 @@ btnInicio.addEventListener("click",function(event){
             title: "¡Ops!",
             text: "¡Usuario y/o contraseña incorrectos!",
             icon: "error"
-          });
+    });
     }
 
     Swal.fire({
@@ -153,9 +153,72 @@ btnInicio.addEventListener("click",function(event){
         text: `${validaInicio.Nombre}`,
         icon: "success"
     });
-    window.location.href = "index.html"
+    window.location.href = "index.html";
 
-    
+    //Nombre de usuario
+    // Limpiamos el contenido actual del navbar
+    navbar.innerHTML = "";
+
+     // Insertamos el nuevo contenido con el nombre de usuario y el botón de cerrar sesión
+    navbar.insertAdjacentHTML("beforeend", `
+    <nav class= "navbar navbar-expand-lg bg-transparent">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../HTML/index.html">Aphrodite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-transparent" id="lista">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../HTML/index.html">Inicio</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-current="page">
+                    <strong>Tienda</strong>
+                    </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
+                            <li><a class="dropdown-item" href="../HTML/tienda.html">Tienda</a></li>
+                            <li><a class="dropdown-item" href="/HTML/cuidadocabello.html">Cuidado cabello</a></li>
+                        </ul>
+                </li>
+
+                <li="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../HTML/contactanos.html">Contáctanos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../HTML/acercadenosotros.html">Nosotros</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <strong>Blog</strong>
+                    </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
+                            <li><a class="dropdown-item" href="/HTML/peeling.html">Peeling</a></li>
+                            <li><a class="dropdown-item" href="/HTML/cuidadocabello.html">Cuidado cabello</a></li>
+                        </ul>
+                </li>
+                                                    
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../HTML/administrador.html">Administrador</a>
+                </li>
+            
+                <a href="/HTML/login.html" target="_blank"><i id="login" class="bi bi-person-circle">${usuario.Nombre}</i></a>
+                <a href="#" target="_blank"><i id="carrito1" class="bi bi-cart3"></i></a>
+            </ul>
+        </div>
+    </div>
+    </nav >
+`);
+
 
 });
 
@@ -175,7 +238,6 @@ btnSignUp.addEventListener("click",()=>{
     container.classList.add("toggle");
 });
 
- 
 
 window.addEventListener("load", function(event){
     event.preventDefault();
