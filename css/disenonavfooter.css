@@ -119,6 +119,13 @@
   
 }
 
+.btn-group>a{
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
 #carrito1 {
   display: inline-flex;
     align-items: center;
@@ -161,8 +168,5 @@
 }
 
 
-.nav-item{
-  font-family: "Alata", sans-serif;
-    font-weight: bold;
-}
+
 

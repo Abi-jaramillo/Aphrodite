@@ -5,7 +5,7 @@ let txtInput = document.getElementById("TextInput");
 let btnEnviar = document.getElementById("btnEnviar");
 let btnClear = document.getElementById ("btnClear");
 const boton_foto=document.querySelector("#btn-foto");
-const imagen = document.querySelector("#user-foto");
+let imagen = document.querySelector("#user-foto");
 let img = document.querySelector("#user-foto");
 
 
@@ -101,7 +101,7 @@ btnEnviar.addEventListener("click", function (event) {
                 txtPrecio.value="";
                 txtCategoria.value="";
                 txtInput.value="";
-                //imagen="";
+                img.remove();
                 nombreProducto.focus();
 
 });
@@ -118,6 +118,7 @@ btnClear.addEventListener("click", function(event){
     txtPrecio.style.border="";
     txtCategoria.style.border="";
     txtInput.style.border="";
+    img.remove();
 });
 
 function validarNombre() {

@@ -20,18 +20,23 @@ navbar.insertAdjacentHTML("beforeend", `
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-current="page">
-                    <strong>Tienda</strong>
-                    </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
-                            <li><a class="dropdown-item" href="../HTML/tienda.html">Tienda</a></li>
-                            <li><a class="dropdown-item" href="/HTML/cuidadocabello.html">Cuidado cabello</a></li>
-                        </ul>
+                <div class="btn-group">
+                <a class="btn btn-lg nav-link active" href="../HTML/tienda.html" >
+                    Tienda
+                </a>
+                <button type="button" class="btn btn-lg dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/HTML/piel.html">Piel</a></li>
+                    <li><a class="dropdown-item" href="../HTML/maquillaje.html">Maquillaje</a></li>
+                    <li><a class="dropdown-item" href="/HTML/cabello.html">Cabello</a></li>
+                </ul>
+                </div>
                 </li>
 
 
-                <li     ="nav-item">
+                <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="../HTML/contactanos.html">Contáctanos</a>
                 </li>
                 <li class="nav-item">
@@ -39,9 +44,12 @@ navbar.insertAdjacentHTML("beforeend", `
                 </li>
                 
                 <li class="nav-item dropdown">
-                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    <strong>Blog</strong>
-                    </button>
+                <a class="btn btn-lg nav-link active" href="#" >
+                Blog
+                </a>
+                <button type="button" class="btn btn-lg dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/HTML/puntosNegros.html">Puntos negros</a></li>
                             <li><a class="dropdown-item" href="/HTML/peeling.html">Peeling</a></li>

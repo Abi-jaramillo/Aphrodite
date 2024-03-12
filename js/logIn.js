@@ -10,6 +10,7 @@ let emailInicio = document.getElementById("emailInicio");
 let passInicio = document.getElementById("passInicio");
 
 
+
 let alertValidaciones = document.getElementById("alertValidaciones");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 
