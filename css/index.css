@@ -1,25 +1,18 @@
-p {
+.titles, h4, h2{
+  font-family: "Bellota", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.texts {
   /* Teléfono */
-  font-size: 12px;
-}
-
-.titles{
-  font-family: "Alata", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.texts{
-  font-family: "Quicksand", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:bold;
-  font-style: normal;
+  font-size: 20px;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   .card-text {
-    font-size: 22px;
+    font-size: 25px;
   }
 }
 
@@ -30,9 +23,32 @@ p {
   }
 }
 
+.titles2{
+  font-family: "Alata", sans-serif;
+  color: #7ba05b;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titles3{
+  font-family: "Alata", sans-serif;
+  color: wh;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.titles4 {
+  font-family: "Alata", sans-serif;
+  color: white;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+
 .Visión {
   background-color: #f7e7ce;
   padding: 20px;
+  border-radius: 5px;
 }
 
 .card {
@@ -41,36 +57,56 @@ p {
 
 }
 
-@media (max-width: 767px) {
-  .col-md-3 {
-    flex: 0 0 100%;
-    max-width: 100%;
+
+#pText{
+  text-align: justify;
+  width: 550px;
+  height: auto;
+}
+
+.imagen-derecha {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    display: flex;
+    align-items: center; /* Center content vertically */
   }
 }
 
-#primerImagen {
-  display: flex;
-  font-size: medium;
-  align-items: center;
-  justify-content: center;
+@media (max-width: 767px) {
+  .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center; /* Center content vertically */
+  }
 }
 
+@media (max-width: 991px) {
+  .col-md-6 img {
+    width: 100%; /* Adjust image width to fill the container */
+    max-width: none; /* Allow image to be larger than its original size */
+  }
+}
 
-
-.btnVisión {
-
+.btnPage {
   background-color: #7ba05b;
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
-  border-radius: 10%;
+  border-radius: 10px;
   border: none;
   color: #FFFFFF;
   padding: 3px 10px;
 }
 
-#cuerpo {
+#contMejorTienda {
   background-color: #7ba05b;
   display: flex;
   flex-direction: column;
@@ -87,35 +123,14 @@ p {
   align-items: center;
   margin-bottom: 20px;
 
-
-
 }
 
-#titulo {
-  padding: 20px;
-  font-family: "Alata";
-  text-align: center;
+#boxMejorTienda {
+  width: 800px;
+  background-color: white;
+  box-shadow: 20px 20px 15px;
 }
 
-.ctext {
-  text-align: justify;
-  padding: 20px;
-}
-
-#cajitas {
-  background-color: #fefefe;
-  width: 60%;
-  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.75);
-  font-family: "bellota";
-  border-width: 1px 4px 8px;
-  margin-top: 20px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-}
 
 .columna-con-linea {
   border-right: 1px solid #000;
@@ -124,31 +139,17 @@ p {
   flex-grow: 1;
 }
 
-.columna-con-linea:last-child {
-  border-right: none;
-}
-
-#pal {
-  font-size: medium;
-}
-
 .IMGFAVORITOS img {
   max-width: 100%;
   height: auto;
 }
 
-#LLEGADOS {
-  color: #7ba05b;
-}
-
-.card {
-  border: none;
-}
-
 #favoritosCarousel{
   margin-bottom: 10px;
 }
+
 #txtLosFavoritos {
+  padding: 20px;
   display: flex;
   align-items: center;
 }
@@ -159,12 +160,16 @@ p {
 
 #btnComprar {
   background-color: #7ba05b;
-  font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
   border: none;
   color: #FFFFFF;
+}
+
+#contOferta {
+  padding: 20px;
+  margin-left: 1rem;
 }
 
 .oferta {
@@ -175,26 +180,6 @@ p {
   border-radius: 5px;
 }
 
-.texto-oferta{
-  font-family: "Quicksand", sans-serif;
-  justify-content: flex-start;
-}
-
-.texto-oferta-2{
-  display: flex;
-  justify-content: end;
-  text-align:justify;
-
-}
-.btn-oferta{
-  display:flex;
-  justify-content: center;
-  text-decoration: none;
-  
-}
-.card-oferta{
-  margin-left: 1rem;
-}
 .card-oferta>a{
   display:flex;
   justify-content: center;
@@ -259,20 +244,12 @@ p {
 
 }
 
-/*.final-sms{
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  display: grid;
-  place-items:center;
-  color:#fefefe;
-  font-family: "Abril Fatface", serif;
-  font-size: 4rem;
+#btnOferta {
+  background-color: black;
+  border-radius: 5px;
+  padding: 10px;
+  font-optical-sizing: auto;
   font-weight: bold;
-  transition: 0.5s;
-  background-color: #7ba05b;
-  transform: translateY(-100%);
-}*/
-
+  border: none;
+  color: #FFFFFF;
+}

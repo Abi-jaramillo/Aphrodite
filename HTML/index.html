@@ -11,12 +11,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="/css/index.css">
   <link rel="shortcut icon" href="/src/images/logo.png" type="image/x-icon">
-  <!--Fuentes-->
+  <!--font-family-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alata&family=Quicksand:wght@300..700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alata&family=Quicksand:wght@300..700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
 <body>
   <header id="navbar"></header>
@@ -24,40 +24,46 @@
   </br>
   <!--EDGAR-->
   <div class="container">
-  <div class="Visión">
-    <div class="card mb-3">
-      <div class="row g-2">
-        <div class="col-md-9 order-md-1" id="principalCard">
-          <div class="card-body card-body-color">
-            <h1 class="display-4 text-center text-dark titles">¡DESCUBRE EL MEJOR PRODUCTO PARA TI!</h1>
-            <br>
-            <p class="card-text texts">Nuestro compromiso apasionado se enfoca en brindar una cuidadosa y minuciosa selección
-              de productos exentos de sustancias químicas nocivas. Nuestros productos están meticulosamente diseñados
-              para nutrir su cuerpo, proporcionándole no solo los beneficios deseados, sino también la tranquilidad de
-              saber que está optando por soluciones saludables y sostenibles.</p>
-            <a href="/HTML/recomendaciones.html">
-              <button class="btnVisión">Ver más</button>
-            </a>
+    <div class="Visión">
+      <div class="card mb-3">
+        <div class="row g-2">
+          <div class="col-md-6 order-md-1">
+            <div class="card-body card-body-color">
+                <h1 class="display-4 text-dark titles" class="titles">DESCUBRE EL MEJOR PRODUCTO PARA TI</h1>
+                <br>
+                <div id="pText">
+                <p class="card-text texts">Nuestro compromiso apasionado se enfoca en brindar una cuidadosa y minuciosa selección
+                  de productos exentos de sustancias químicas nocivas. Nuestros productos están meticulosamente diseñados
+                  para nutrir su cuerpo, proporcionándole no solo los beneficios deseados, sino también la tranquilidad de
+                  saber que está optando por soluciones saludables y sostenibles.</p>
+                  
+                <a href="/HTML/recomendaciones.html">
+                  <button class="btnPage">Ver más</button>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-md-3 order-md-2">
-          <img src="/src/images/SkinCare.jpg" class="img-fluid rounded-end" alt="...">
+          <div class="col-md-6 order-md-2">
+            <img src="/src/images/pexels-karolina-grabowska-7321655.jpg" class="rounded imagen-derecha">
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+  
   <!--JOSHUA-->
   <br>
   <div class="container text-center" id="recienllegados">
     <div class="cardRecienLlegados">
       <div class="card-body">
-        <H1 id="LLEGADOS" class="display-4"> RECIÉN LLEGADOS </H1>
+        <h1 class="titles2" class="display-4"> Recién llegados</h1>
+        <br>
         <p class="card-text texts">¡Eleva tu rutina de cuidado personal a un nivel más verde y radiante con lo último en
-          bienestar consciente en Aphrodite!</p>
+          bienestar consciente en <a class="navbar-brand" href="../HTML/index.html">Aphrodite</a>!</p>
       </div>
     </div>
+    <br>
+    <br>
     <div class="row">
       <div class="col">
         <div class="IMGFAVORITOS" id="IMGJIM">
@@ -84,34 +90,32 @@
   <br>
   <!--NATY-->
   <div class="container">
-    <div class="card" style="max-width: 65rem; margin: 0 auto;" id="cuerpo">
+    <div class="card" style="max-width: 65rem; margin: 0 auto;" id="contMejorTienda">
       <img src="https://twenergy.com/wp-content/uploads/2021/02/productos-cosmetica-natural.jpg"
         class="card-img-top img-fluid" style="padding-right: 15px;">
-
       <div class="card-body">
-
-        <h1 class="card-title titles>La mejor tienda desde 2024</h1>
-        <p class="card-text texts">En <strong>Aphrodite</strong>, nos destacamos por ofrecer asesoramiento
-          personalizado en
-          línea, garantizando que encuentres los productos ideales para ti.
+        <h1 class="titles3" class="card-title titles"> La mejor tienda desde 2024</h1>
+        <br>
+        <p class="card-text texts">En <a class="navbar-brand" href="../HTML/index.html">Aphrodite</a>, nos destacamos por ofrecer asesoramiento personalizado en línea, garantizando que encuentres los productos ideales para ti.
           Disfruta de promociones y descuentos frecuentes, además de colaboraciones con estilistas y expertos en
           cuidado de la piel para brindarte recomendaciones exclusivas.</p>
-
-        <div class="container text-center" id="cajitas">
+          <br>
+          <br>
+        <div class="container text-center" id="boxMejorTienda">
           <div class="row">
             <div class="col-md-4 columna-con-linea">
-              <p id="pal">
-              <h4 class="titles">Nos ubicamos en 5 ciudades</h4>
+              <p>
+              <h4 class="titles">Nos ubicamos en <h2>5 ciudades</h2></h4>
               </p>
             </div>
             <div class="col-md-4 columna-con-linea">
-              <p id="pal">
-              <h4 class="titles">+500 clientes</h4>
+              <p>
+                <h2>+500</h2> <h4 class="titles">clientes</h4>
               </p>
             </div>
             <div class="col-md-4 columna-con-linea">
-              <p id="pal">
-              <h4 class="titles">100% comprometidos con el medio ambiente y la salud</h4>
+              <p>
+              <h2>100%</h2><h4 class="titles">comprometidos con el medio ambiente y la salud</h4>
               </p>
             </div>
           </div>
@@ -153,7 +157,7 @@
       </div>
       <div class="col-md-8 order-md-1" id="txtLosFavoritos">
         <div class="card-body">
-          <h1 class="display-4 titles">LOS FAVORITOS</h1>
+          <h1 class="titles3" class="display-4 titles">Los favoritos</h1>
           <br>
           <p class="card-text texts">
             ¡Descubre tus favoritos en nuestra selección exclusiva de productos!
@@ -173,13 +177,15 @@
     </div>
   </div>
 </div>
+
 <!--Nuestros productos-->
 </br>
-<br>
   <div class="container text-center" id="recienllegados">
     <div class="cardRecienLlegados">
       <div class="card-body">
-        <h1 class="display-4 titles" id="LLEGADOS"> NUESTROS PRODUCTOS </h1><br>
+        <h1 class="titles2" class="display-4 titles"> Nuestros productos </h1>
+        <br>
+        <br>
       </div>
     </div>
     <div class="row">
@@ -208,15 +214,15 @@
   <br>
   
 <!--Ofertas-->
-
 <div class="container">
     <div class="card mb-3 oferta">
       <div class="row g-2">
         <div class="col-md-9 order-md-1 ">
-          <div class="card-body card-body-color card-oferta">
-            <h1 class="display-4 card-title text-center text-white texto-oferta">Oferta del día</h1>
+          <div id="contOferta"class="card-body card-body-color card-oferta">
+            <h1 class="titles4" class="display-4 card-title text-center text-white texto-oferta">Oferta del día</h1>
             <br>
-            <p class="texto-oferta-2">¡Descubre la solución definitiva para transformar tu melena y devolverle su esplendor! Nuestro kit de reparación de cabello dañado es la respuesta a tus desvelos capilares. Sumérgete en una experiencia rejuvenecedora que revitalizará cada hebra, devolviéndole la vitalidad y la fortaleza que merece.</p>
+            <p class="card-text texts">¡Descubre la solución definitiva para transformar tu melena y devolverle su esplendor! Nuestro kit de reparación de cabello dañado es la respuesta a tus desvelos capilares. Sumérgete en una experiencia rejuvenecedora que revitalizará cada hebra, devolviéndole la vitalidad y la fortaleza que merece.</p>
+            <br>
             <div class="container-cuenta">
             <div class="countdown">
               <div>
@@ -235,13 +241,15 @@
                 <p id="segundos">00</p>
                 <span>Segundos</span>
               </div>
-             <!-- <div class="final-sms"><h4>Terminó la oferta, ¡espera la siguiente! 🌺</h4></div>-->
             </div>
           </div>
-            
+            <br>
+
+            <div id="btnOdertaDiv">
             <a href="/HTML/cabello.html">
-              <button type="button" class="btn btn-success btn-oferta" id="btnComprar" style="background-color: black;">Ver más</button>
+              <button type="button" id="btnOferta">Ver más</button>
             </a>
+          </div>
           </div>
         </div>
         <div class="col-md-3 order-md-2 imagen-oferta">
