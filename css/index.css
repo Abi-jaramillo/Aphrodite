@@ -43,8 +43,13 @@
   font-style: normal;
 } 
 
+.btnVerMas{
+  text-align: center;
+  margin-top: 0;
+}
+
 .background-video {
-  z-index: -1;
+  z-index: -2;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -62,20 +67,18 @@
 }
 
 .content {
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 15%;
   margin-right: 13%;
-  margin-bottom: 15%;
+  /* margin-bottom: 2%; */
   justify-content: center;
   text-align: center;
   align-items: center;
   position: relative;
-  z-index: 1;
   padding-left: 15px;
 }
 
 .card {
-  z-index: -4;
   position: relative;
   border: none;
   background-color:transparent;
@@ -83,7 +86,6 @@
 
 .btnPage {
   position: relative;
-  z-index: 2;
   background-color: #7ba05b;
   font-size: 16px;
   font-weight: bold;
@@ -110,7 +112,9 @@
   margin-top: 15px;
 }
 
+
 #contMejorTienda {
+  z-index: -2;
   background-color: #7ba05b;
   display: flex;
   flex-direction: column;
@@ -119,40 +123,54 @@
   align-items: center;
 
 }
-
-.card-img-top {
-  max-width: 65%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-
+.imagen-izquierda {
+  margin: 10%;
+  width: 100%;
+  max-width: 100%;
 }
 
+.columna-con-linea {
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
 #boxMejorTienda {
-  width: 800px;
+  z-index: 2;
+  float: right;
+  margin-top: -2em;
+  align-self: center;
   background-color: white;
   box-shadow: 20px 20px 15px;
 }
 
-
 .columna-con-linea {
-  border-right: 1px solid #000;
+  border-right: 2px solid #000;
   padding: 10px;
   text-align: center;
   flex-grow: 1;
 }
 
-.IMGFAVORITOS img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 20px;
+.columna-con-linea::before,
+.columna-con-linea::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  background-color: #000;
+  top: 0;
+}
+
+.columna-con-linea::before {
+  left: 0;
+}
+
+.columna-con-linea::after {
+  right: 0;
 }
 
 #favoritosCarousel{
   margin-bottom: 10px;
 }
-
 #txtLosFavoritos {
   padding: 20px;
   display: flex;
