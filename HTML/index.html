@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 
 <body>
-  <header id="navbar"></header>
+  <header id="navbar" style="position: sticky; top: 0; background-color: white; z-index: 2;"></header>
 
   
   <br><br><br><br><br>
@@ -27,31 +27,34 @@
   
   <!--LANDING PAGE-->
 
-  <div class="container">
-    <div class="card mb-3">
-      <div class="row g-2">
-          <div class="card-body card-body-color background-video">
-            <video width="720" height="600" autoplay loop muted>
-              <source src="/src/images/Diseño sin título (1).mp4">
-            </video>
+  <div class="background-video">
+    <video autoplay loop muted>
+      <source src="/src/images/Diseño sin título (1).mp4">
+    </video>
+    <div class="container">
+      <div class="card mb-3">
+        <div class="row g-2 align-items-center">
+          <div class="card-body card-body-color">
             <div class="content">
-              <h1 class="display-4 text-dark titles" class="titles">Descubre el mejor producto para ti</h1>
+              <h1 class="display-4 text-dark titles">Descubre el mejor producto para ti</h1>
               <br>
-              <p class="card-text texts">Nos enfocamos en brindar una selección de productos exentos de sustancias químicas nocivas.  Diseñados para nutrir el cuerpo, proporcionándole los beneficios deseados, además de ser una opción saludable y sostenible</p>
-                <br>
+              <p class="card-text texts">Nos enfocamos en brindar una selección de productos exentos de sustancias químicas nocivas. Diseñados para nutrir el cuerpo, proporcionándole los beneficios deseados, además de ser una opción saludable y sostenible</p>
+              <br>
+              <div class="btnVerMas">
+                <a href="/HTML/tienda.html">
+                  <button type="button" class="btnPage">Ver más</button>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="btnVerMas">
-            <a href="/HTML/tienda.html">
-              <button type="button" class="btnPage">Ver más</button>
-            </a>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
   
   <!--RECIÉN LLEGADOS-->
-  <br><br><br><br><br>
+  <br><br>
   <div class="container text-center" id="recienllegados">
     <div class="cardRecienLlegados">
       <div class="card-body">
@@ -88,42 +91,44 @@
   <br>
   <br>
 
-  <!--LA MEJOR TIENDA-->
-  <div class="container">
-    <div class="card" style="max-width: 65rem; margin: 0 auto;" id="contMejorTienda">
-      <div class="card-body d-flex align-items-center">
-        <div class="row">
-          <div class="col-md-6">
-            <img src="https://twenergy.com/wp-content/uploads/2021/02/productos-cosmetica-natural.jpg" class="img-fluid mx-auto d-block imagen-izquierda">
-          </div>
-          <div class="col-md-6">
-            <h1 class="titles3 card-title titles">La mejor tienda desde 2024</h1>
-            <br>
-            <p class="card-text texts">En <a class="navbar-brand" href="../HTML/index.html">Aphrodite</a>, nos destacamos por ofrecer asesoramiento personalizado en línea, garantizando que encuentres los productos ideales para ti.
-              Disfruta de promociones y descuentos frecuentes, además de colaboraciones con estilistas y expertos en
-              cuidado de la piel para brindarte recomendaciones exclusivas.</p>
-            <br>
-            <br>
-            <div class="container text-center" id="boxMejorTienda">
-              <div class="row d-flex align-items-center">
-                <div class="col columna-con-linea">
-                  <h4>Nos ubicamos en <h2>5 ciudades</h2></h4>
-                </div>
-                <div class="col columna-con-linea">
-                  <h2>+500</h2> <h4>clientes</h4>
-                </div>
-                <div class="col columna-con-linea">
-                  <h2>100%</h2> <h4>comprometidos con el medio ambiente y la salud</h4>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- LA MEJOR TIENDA -->
+</br>
+<div class="container text-center">
+  <div class="card-body">
+    <h1 class="titles2 display-4 titles"> La mejor tienda desde 2024 </h1>
+    <p class="card-text texts">En <a class="navbar-brand" href="../HTML/index.html">Aphrodite</a>, garantizamos que encuentres los productos ideales para ti. Disfruta de promociones y descuentos frecuentes, además de colaboraciones con estilistas y expertos en cuidado de la piel para brindarte recomendaciones exclusivas</p>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-12 col-md-4 mb-4 mb-md-0">
+      <div class="card text-bg-dark">
+        <img src="/src/images/1.png" class="card-img img-fluid">
+        <div class="card-img-overlay">
+          <p><h4>Nos ubicamos en <h2>5 ciudades</h2></h4></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4 mb-4 mb-md-0">
+      <div class="card text-bg-dark">
+        <img src="/src/images/2.png" class="card-img img-fluid">
+        <div class="card-img-overlay">
+          <p><h2>+500</h2> <h4>clientes</h4></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="card text-bg-dark">
+        <img src="/src/images/3.png" class="card-img img-fluid" alt="...">
+        <div class="card-img-overlay" id="Comprometidos">
+          <p><h2>100%</h2> <h4>comprometidos con el medio ambiente y la salud</h4></p>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-</br>
+<br>
+<br>
 
   <!--LOS FAVORITOS-->
   <div class="container">
@@ -211,19 +216,18 @@
     </div>
   </div>
   <br>
-  <br>
   
 <!--OFERTA DEL DÍA-->
 <div class="container">
-    <div class="card mb-3 oferta">
-      <div class="row g-2">
-        <div class="col-md-9 order-md-1 ">
-          <div id="contOferta"class="card-body card-body-color card-oferta">
-            <h1 class="titles4" class="display-4 card-title text-center text-white texto-oferta">Oferta del día</h1>
-            <br>
-            <p class="card-text texts">¡Descubre la solución definitiva para transformar tu melena y devolverle su esplendor! Nuestro kit de reparación de cabello dañado es la respuesta a tus desvelos capilares. Sumérgete en una experiencia rejuvenecedora que revitalizará cada hebra, devolviéndole la vitalidad y la fortaleza que merece.</p>
-            <br>
-            <div class="container-cuenta">
+  <div class="card mb-3 oferta">
+    <div class="row g-2">
+      <div class="col-md-3 order-md-1">
+        <div id="contOferta" class="card-body card-body-color card-oferta">
+          <h1 class="titles4 display-4 card-title text-center text-white texto-oferta">Oferta del día</h1>
+          <br>
+          <p class="card-text texts">¡Descubre la solución definitiva para transformar tu melena y devolverle su esplendor! Nuestro kit de reparación de cabello dañado es la respuesta a tus desvelos capilares. Sumérgete en una experiencia rejuvenecedora que revitalizará cada hebra, devolviéndole la vitalidad y la fortaleza que merece.</p>
+          <br>
+          <div class="container-cuenta">
             <div class="countdown">
               <div>
                 <p id="dias">00</p>
@@ -243,26 +247,23 @@
               </div>
             </div>
           </div>
-            <br>
-
-            <div id="btnOdertaDiv">
+          <br>
+          <div id="btnOdertaDiv">
             <a href="/HTML/cabello.html">
               <button type="button" id="btnOferta">Ver más</button>
             </a>
           </div>
-          </div>
         </div>
-        <div class="col-md-3 order-md-2 imagen-oferta">
-          <img src="/src/images/Imagen-oferta.png" alt="kit pro-reparación">
-        </div>
+      </div>
+      <div class="col-md-9 order-md-2 imagen-oferta">
+        <img src="/src/images/kit_the_ordinary.png" class="img-fluid h-100">
       </div>
     </div>
   </div>
 </div>
-
-
-
   <br>
+
+  <!-- FOOTER -->
   <div id="footer"></div>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

@@ -1,8 +1,9 @@
 .titles, h4, h2{
+  color: black;
   font-family: "Bellota", system-ui;
   font-weight: 700;
   font-style: normal;
-}*/
+}
 
 .texts {
   /* Teléfono */
@@ -19,7 +20,7 @@
 /* Desktop */
 @media (max-width: 1024px) {
   .card-text {
-    font-size: 15px;
+    font-size: 20px;
   }
 }
 
@@ -28,6 +29,36 @@
   color: #7ba05b;
   font-weight: 400;
   font-style: normal;
+}
+
+.card-body {
+  padding-bottom: 0px;
+}
+
+.card-img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-img-overlay h2 {
+  margin-bottom: 50px;
+}
+
+.card-img-overlay h4 {
+  margin-top: -50px;
+}
+
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 
 .titles3{
@@ -43,129 +74,54 @@
   font-style: normal;
 } 
 
-.btnVerMas{
-  text-align: center;
-  margin-top: 0;
-}
-
 .background-video {
-  z-index: -2;
-  height: 100%;
-  width: 100%;
+  position: relative;
   overflow: hidden;
+  border-radius: 15px;
+  margin-top: -100px;
 }
 
 .background-video video {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 15px;
+  z-index: -1;
 }
 
 .content {
-  margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 13%;
-  /* margin-bottom: 2%; */
-  justify-content: center;
-  text-align: center;
-  align-items: center;
   position: relative;
-  padding-left: 15px;
+  padding: 20%;
+  text-align: center;
+  z-index: 1;
 }
 
 .card {
-  position: relative;
   border: none;
-  background-color:transparent;
+  background-color: transparent;
+}
+
+.btnVerMas {
+  margin-top: 20px;
+  text-align: center;
+  z-index: 1;
 }
 
 .btnPage {
-  position: relative;
   background-color: #7ba05b;
   font-size: 16px;
   font-weight: bold;
-  font-style: normal;
-  border-radius: 10px;
+  font-family: "Quicksand", sans-serif;
   border: none;
   color: #FFFFFF;
-  padding: 1.5% 5%;
-  align-items: center;
-  min-width: 120px;
-  
-  background-color: #7ba05b;
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    border: none;
-    color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-
-#contMejorTienda {
-  z-index: -2;
-  background-color: #7ba05b;
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  min-width: 100%;
-  align-items: center;
-
-}
-.imagen-izquierda {
-  margin: 10%;
-  width: 100%;
-  max-width: 100%;
-}
-
-.columna-con-linea {
-  padding: 10px;
-  text-align: center;
-  flex-grow: 1;
-}
-#boxMejorTienda {
-  z-index: 2;
-  float: right;
-  margin-top: -2em;
-  align-self: center;
-  background-color: white;
-  box-shadow: 20px 20px 15px;
-}
-
-.columna-con-linea {
-  border-right: 2px solid #000;
-  padding: 10px;
-  text-align: center;
-  flex-grow: 1;
-}
-
-.columna-con-linea::before,
-.columna-con-linea::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color: #000;
-  top: 0;
-}
-
-.columna-con-linea::before {
-  left: 0;
-}
-
-.columna-con-linea::after {
-  right: 0;
+#Comprometidos {
+  padding-right: 9.5em;
 }
 
 #favoritosCarousel{
@@ -198,27 +154,24 @@
 
 .oferta {
   background-color: #7ba05b;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   border-radius: 20px;
 }
 
-.card-oferta>a{
-  display:flex;
+.card-oferta>a {
+  display: flex;
   justify-content: center;
 }
-.imagen-oferta{
+
+.imagen-oferta {
   display: flex;
-  justify-content:center;
+  justify-content: flex-start;
 }
 
-.imagen-oferta>img{
-  max-width: 90%;
-  max-height: 90%;
-  display: flex;
-  margin: 1rem 1rem;
-}
+.imagen-oferta>img {
+  min-width: 20dvh;
+  max-width: 50dvh;
+  max-height: 50dvh;
+} 
 .container-cuenta{
   width: 100%;
   display: flex;
@@ -269,22 +222,16 @@
 }
 
 #btnOferta {
-  background-color: black;
-  font-size: 16px;
-  font-weight: bold;
-  font-style: normal;
-  border-radius: 10px;
-  border: none;
-  color: #FFFFFF;
-  padding: 1.5% 5%;
-  align-items: center;
-  min-width: 120px;
-  
-  background-color: black;
+    background-color: #FFFFFF;
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
     border: none;
-    color: #FFFFFF;
+    color: black;
+    font-size: 16px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    align-items: center;
+    min-width: 120px;
 }
