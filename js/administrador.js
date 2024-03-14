@@ -71,7 +71,7 @@ btnEnviar.addEventListener("click", function (event) {
     
 
     if(! regex.test(txtPrecio.value)) { 
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> tiene que tener un formato 00.00 <br/>`);
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong> precio </strong> tiene que tener un formato $00.00 <br/>`);
         alertValidaciones.style.display = "block";
         txtPrecio.style.border = "solid red thin";
         existError=true;
@@ -96,14 +96,14 @@ btnEnviar.addEventListener("click", function (event) {
             showConfirmButton: false,
             timer: 1500
           });
-    };
+    
                 nombreProducto.value="";
                 txtPrecio.value="";
                 txtCategoria.value="";
                 txtInput.value="";
                 img.remove();
                 nombreProducto.focus();
-
+            };
 });
 
 btnClear.addEventListener("click", function(event){
