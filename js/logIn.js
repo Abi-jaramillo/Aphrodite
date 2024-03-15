@@ -49,7 +49,7 @@ btnRegistrarse.addEventListener("click", function (event) {
     txtContrasena1.style.border="";
     txtContrasena2.style.border="";
 
-    let hayError = false;
+    var hayError = false;
 
     if (txtCorreo.value.length < 3 ) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `El <strong>Correo electrónico </strong> ingresado no es correcto <br/>`);
@@ -76,7 +76,7 @@ btnRegistrarse.addEventListener("click", function (event) {
         
     } 
 
-    if (txtContrasena1.value.length < 8 || !regexContrasena.test(txtContrasena1.value)) {
+    if (txtContrasena1.value.length < 8 && !regexContrasena.test(txtContrasena1.value)) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> Contraseña </strong> 
         debe tener: <br> -Mínimo <strong>8</strong> caracteres y máximo <strong>15</strong>. <br>
         -Una letra mayúscula y mínimo una minúscula. <br> -Al menos un número y un carácter especial. <br>`);
@@ -91,8 +91,6 @@ btnRegistrarse.addEventListener("click", function (event) {
         txtContrasena2.style.border = "solid red thin";
         hayError = true;
     } else {
-        alertConfirmacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> coinciden <br>`);
-        alertConfirmaciones.style.display = "block";
         hayError = false;
     }
 
@@ -132,11 +130,6 @@ btnRegistrarse.addEventListener("click", function (event) {
 
 btnClear.addEventListener("click", function(event){
     event.preventDefault();
-    txtNombre.value="";
-    txtTelefono.value="";
-    txtCorreo.value="";
-    txtContrasena1.value="";
-    txtContrasena2.value="";
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     alertConfirmacionesTexto.innerHTML="";
@@ -146,6 +139,7 @@ btnClear.addEventListener("click", function(event){
     txtCorreo.style.border="";
     txtContrasena1.style.border="";
     txtContrasena2.style.border="";
+
 
 });
 
