@@ -9,11 +9,11 @@ footer.insertAdjacentHTML("beforebegin",
     <a href="#"><i class="bi bi-facebook"></i></a>
     </div>
     <ul class="list-inline">
-        <li class="list-inline-item"><a href="../HTML/index.html">Inicio</a></li>
-        <li class="list-inline-item"><a href="../HTML/tienda.html">Tienda</a></li>
-        <li class="list-inline-item"><a href="../HTML/acercadenosotros.html">Nosotros</a></li>
-        <li class="list-inline-item"><a href="../HTML/contactanos.html">Contáctanos</a></li>
-        <li class="list-inline-item"><a href="../HTML/administrador.html">Administrador</a></li>
+        <li class="list-inline-item"><a href="./index.html">Inicio</a></li>
+        <li class="list-inline-item"><a href="./tienda.html">Tienda</a></li>
+        <li class="list-inline-item"><a href="./acercadenosotros.html">Nosotros</a></li>
+        <li class="list-inline-item"><a href="./contactanos.html">Contáctanos</a></li>
+        <li class="list-inline-item"><a href="./administrador.html">Administrador</a></li>
         </ul>
     <p class="copyright">Aphrodite © 2024</p>
     </footer>

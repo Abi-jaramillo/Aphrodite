@@ -52,11 +52,11 @@
 }
 
 .img-box{
-    width: 150px;
-    height: 32rem;
+    width: 270px;
+    height: 37rem;
     margin: 10px;
     border-radius: 50px;
-    background: url(/src/images/hombre.jpg) ;
+    background: url(/src/images/peeling_hombre.jpg) ;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -64,22 +64,28 @@
 }
 
 #img-box1{
-    background: url(https://mdbeducation.com/wp-content/uploads/2023/11/guia-practica-para-identificar-el-rostro-de-un-cliente-8282.jpg);
+    background: url(/src/images/skincarechica.jpg);
     background-size: cover;
-    background-position: center;
+    background-position:center;
 }
 #img-box2{
-    background: url(https://m.media-amazon.com/images/I/41o4AWNAQhS.jpg);
+    background: url(/src/images/cuidadocabello.jpg);
     background-size: cover;
     background-position: center;
 }
 .img-box h3{
-    color: #000000;
+    color: white;
     position: absolute;
+    background-color: #000000;
+    border-radius: 10px;
     bottom: 0;
     left: 30px;
     opacity: 0;
     transition: bottom 0.5s, opacity 0.5s;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .img-box:hover{
