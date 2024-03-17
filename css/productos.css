@@ -4,14 +4,15 @@
     font-weight: 400;
     font-style: normal;
     text-align: center; 
+
 }
 
 .card-wraper{
-       column-gap: 10px;
+  column-gap: 10px;
 }
 
-    #carrito-productos {
-        display: inline-flex;
+#carrito-productos {
+    display: inline-flex;
           align-items: center;
           justify-content: center;
           color: #ffffff;
@@ -28,3 +29,11 @@
         transform: translateY(-10px);
         
       }
+
+.card-img-top {
+  width: 100%;
+  max-width: var(--max);
+  height: 25rem;
+  object-fit: cover;
+  margin-top: auto;
+} 

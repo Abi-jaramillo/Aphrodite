@@ -1,19 +1,19 @@
 
 
 function addItem(item) {
-  const itemHTML = ` <div class=col> <div class="card"       >
-  <img src="`+ item.img + `" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">`+ item.name + `</h5>
-    <h6 class="card-title">`+ item.section + `</h6>
-    <p class="card-text">`+ item.description + `</p>
-    <p class="card-text">`+ item.price + `</p>
-    <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
-    
-  </div>
-</div> 
-</div> 
-</br>`;
+  const itemHTML = `<div class=card-group> 
+                      <div class="card">
+                        <img src="`+ item.img + `" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">`+ item.name + `</h5>
+                          <h6 class="card-title">`+ item.section + `</h6>
+                          <p class="card-text">`+ item.description + `</p>
+                          <p class="card-text">`+ item.price + `</p>
+                          <a href="#" class="btn btn-primary"  id="carrito-productos"  >Agregar al carrito</a>
+                        </div>
+                      </div> 
+                    </div> 
+                    </br>`;
   const itemsContainer = document.getElementById("list-itemsHair");
   itemsContainer.innerHTML += itemHTML;
 }

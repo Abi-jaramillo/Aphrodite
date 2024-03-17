@@ -1,5 +1,5 @@
 function addItem(item) {
-  const itemHTML = ` <div class=col> <div class="card"       >
+  const itemHTML = ` <div class=card-group> <div class="card"       >
   <img src="`+ item.img + `" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">`+ item.name + `</h5>
