@@ -20,52 +20,95 @@
 <body>
     <div class="container">
         <div class="container-form">
-            <form class="sign-in">
+            <form class="sign-in needs-validation" novalidate>
                 <h2 class="title">Iniciar Sesión</h2>
                     <span class="text">Use su correo y contraseña</span>
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" id="emailInicio" placeholder="Email">
+                    <input type="text" id="emailInicio validationCustom01"  class="form-control" placeholder="Email" required>
+                    <div class="valid-feedback">
+                        Campo correcto </div>
+                   <div class="invalid-feedback">
+                    Campo inválido</div>
                 </div>
+               
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" id="passInicio"   placeholder="Contraseña">
+                    <input type="password" id="passInicio validationCustom02" class="form-control" placeholder="Contraseña" required>
+                    <div class="valid-feedback">
+                        Campo correcto 
+                    </div>
+                   <div class="invalid-feedback">
+                    Campo inválido</div>
                 </div>
-                <button class="button" id="btnIniciar">Iniciar sesión</button>
+                <button class="button" type="submit" id="btnIniciar">Iniciar sesión</button>
             </form>
         </div>
 
         <div class="container-form">
-            <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
+            <!--<div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
                 <p id="alertValidacionesTexto"></p>
             </div>
             <div class="alert alert-success fade show" style="display:none;" role="alert" id="alertConfirmaciones">
                 <p id="alertConfirmacionesTexto"></p>
-            </div>
-            <form class="sign-up">
+            </div>-->
+            <form class="sign-up needs-validation" novalidate>
                 <h2 class="title">Regístrate</h2>
                 <span class="text">Use su correo electrónico para registrarse</span>
                 <div class="container-input">
                     <ion-icon name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Nombre" id="Nombre">
-                </div>
-                <div class="container-input">
+                    <input type="text" placeholder="Nombre" class="form-control" id="Nombre validationCustom03" required>
+                    <div class="valid-feedback">
+                       Información correcta
+                      </div>
+                      <div class="invalid-feedback">
+                        Campo inválido
+                      </div>
+                  </div>
+                
+                <div class="container-input col-md-4">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" placeholder="Email" id="Correo">
-                </div>
+                    <input type="text" placeholder="Email" class="form-control" id="Correo validationCustom04" required>
+                <div class="valid-feedback">
+                Información correcta
+            </div>
+                      <div class="invalid-feedback">
+                        Campo inválido
+                      </div>
+                    </div>
+                    
+
                 <div class="container-input">
                     <ion-icon name="call-outline"></ion-icon>
-                    <input type="text" placeholder="Teléfono" id="Telefono">
-                </div>
+                    <input type="text" placeholder="Teléfono" class="form-control" id="Teléfono validationCustom05" required>
+                    <div class="valid-feedback">
+                        Información correcta
+                    </div>
+                              <div class="invalid-feedback">
+                                Campo inválido
+                              </div>
+                            </div>
+                <div class="container-input col-md-3">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" placeholder="Contraseña" class="form-control" id="Contrasena1 validationCustom06" minlength="8" required>
+                    <div class="valid-feedback">
+                        Información correcta
+                    </div>
+                              <div class="invalid-feedback">
+                                Campo inválido
+                              </div>
+                            </div>
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Contraseña" id="Contrasena1" minlength="8">
-                </div>
-                <div class="container-input">
-                    <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="Confirma contraseña" id="Contrasena2" minlength="8">
-                </div>
-                <button class="btn button" id="btnRegistrarse">Regístrate</button>
+                    <input type="password" placeholder="Confirma contraseña" class="form-control" id="Contrasena2 validationCustom07" minlength="8" required>
+                    <div class="valid-feedback">
+                        Información correcta
+                    </div>
+                              <div class="invalid-feedback">
+                                Campo inválido
+                              </div>
+                            </div>
+                <button class="btn button" type="submit" id="btnRegistrarse">Regístrate</button>
 
                 <button class="btn button" id="btnClear">Limpiar</button>
             </form>

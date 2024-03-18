@@ -29,7 +29,7 @@ let regexContrasena = (/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])([A-Za-z\d$@$!
 let storedData =localStorage.getItem("informacion");
 let info = new Array();
 //alerta Validación 
-btnRegistrarse.addEventListener("click", function (event) {
+btnRegistrarse.addEventListener("submit", function (event) {
     event.preventDefault();
 
     alertValidacionesTexto.innerHTML="";
@@ -77,11 +77,11 @@ btnRegistrarse.addEventListener("click", function (event) {
     } 
 
     if (txtContrasena1.value.length < 8 && !regexContrasena.test(txtContrasena1.value)) {
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> Contraseña </strong> 
-        debe tener: <br> -Mínimo <strong>8</strong> caracteres y máximo <strong>15</strong>. <br>
-        -Una letra mayúscula y mínimo una minúscula. <br> -Al menos un número y un carácter especial. <br>`);
-        alertValidaciones.style.display = "block";
-        txtContrasena1.style.border = "solid red thin";
+        //alertValidacionesTexto.insertAdjacentHTML("beforeend", `La <strong> Contraseña </strong> 
+       // debe tener: <br> -Mínimo <strong>8</strong> caracteres y máximo <strong>15</strong>. <br>
+        //-Una letra mayúscula y mínimo una minúscula. <br> -Al menos un número y un carácter especial. <br>`);
+        //alertValidaciones.style.display = "block";
+        //txtContrasena1.style.border = "solid red thin";
         hayError = true;
     } else if (txtContrasena1.value !== txtContrasena2.value) {
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `Las <strong> Contraseñas </strong> 
@@ -143,12 +143,12 @@ btnClear.addEventListener("click", function(event){
 
 });
 
-btnInicio.addEventListener("click",function(event){
+btnInicio.addEventListener("submit",function(event){
     event.preventDefault();
     let validaInicio = info.find(usuario => usuario.Correo === emailInicio.value && usuario.Contraseña === passInicio.value)
     if(!validaInicio){
         return Swal.fire({
-            title: "¡Ops!",
+            title: "¡Oops!",
             text: "¡Usuario y/o contraseña incorrectos!",
             icon: "error"
     });
@@ -181,6 +181,26 @@ btnSignUp.addEventListener("click",()=>{
 });
 
 
+   // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+    'use strict'
+  
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    // Loop over them and prevent submission
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+  })()
+
+
 window.addEventListener("load", function(event){
     event.preventDefault();
 
@@ -192,5 +212,6 @@ window.addEventListener("load", function(event){
    
         console.log (info);
     } 
+
 
 });
