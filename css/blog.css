@@ -1,25 +1,51 @@
-body{
-    margin-left: 3rem;
-    margin-right: 3rem;
-}
-.titles{
+.titles, h4, h2{
+    color: black;
+    font-family: "Bellota", system-ui;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .texts{
+    /* Teléfono */
+    font-size: 20px;
+  }
+  
+  /* Tablet */
+  @media (min-width: 768px) {
+    .card-text {
+      font-size: 25px;
+    }
+  }
+  
+  /* Desktop */
+  @media (max-width: 1024px) {
+    .card-text {
+      font-size: 20px;
+    }
+  }
+  
+  .titles2{
+    font-family: "Alata", sans-serif;
+    color: #7ba05b;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .titles3{
     font-family: "Alata", sans-serif;
     font-weight: 400;
     font-style: normal;
-}
-
-.texts{
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight:bold;
+  }
+  
+  .titles4 {
+    font-family: "Alata", sans-serif;
+    color: white;
+    font-weight: 400;
     font-style: normal;
-}
+  } 
 
-.card-columns{
-    display: inline-block;
-}
-
-.container-blog{
-    margin-left: 3rem;
-    margin-right: 3rem;
+.primeraSeccion {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
