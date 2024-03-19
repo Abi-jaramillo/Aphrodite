@@ -24,33 +24,34 @@
 
   <header id="navbar"></header>
 
-  <div class="grid-container bg-imagecontacto">
-    <div class="card" style="width: 30rem; ">
-      <div class="card-body">
-        <h1 class="card-title text-center">Contáctanos</h1>
-        <form>
-          <fieldset>
+  <main class="bg-imagecontacto">
+  <div class="container ">
+    
+     <form class="row g-3">
+
+          <fieldset class="contenedor">
+            <h1 class="card-title text-center">Contáctanos</h1>
             <legend class="text-center">Ingrese sus datos</legend>
             <div class="alert alert-danger fade show" style="display:none;" role="alert" id="alertValidaciones">
               <p id="alertValidacionesTexto"></p>
             </div>
             <!-- Nombre -->
-            <div class="mb-3">
+            <div class="col-12">
               <label for="TextInput" class="txtNombre">Nombre </label>
               <input type="text" id="Nombre" class="form-control" placeholder="Nombre completo">
             </div>
             <!-- Email -->
-            <div class="mb-3">
+            <div class="col-12">
               <label for="TextInput" class="txtCorreo" style="text-align: start;">Email</label>
               <input type="email" id="Correo" class="form-control" placeholder="email@domain.com">
             </div>
             <!-- Telefono -->
-            <div class="mb-3">
+            <div class="col-12">
               <label for="TextInput" class="txtTelefono">Teléfono </label>
               <input type="text" id="Telefono" class="form-control" placeholder="5555555555" maxlength="10">
             </div>
             <!-- Menu desplegable -->
-            <div class="mb-3">
+            <div class="col-12">
               <label for="TextInput" class="form-label">Seleccione</label>
               <label for="deselectSelect" class="form-label"></label>
               <select id="deselectSelect" class="form-select">
@@ -61,28 +62,29 @@
                </select>
             </div>
               <!-- Descripción o mensaje -->
-              <div class="mb-3">
+              <div class="col-12">
                 <label for="TextInput" class="form-label">Descripción</label>
                 <input type="text" id="TextInput" class="form-control" placeholder="Escriba un mensaje">
               </div>
               <!--Botón -->
-              <div class="btn-container">
+              <div class="btn-container mt-3">
                 <button type="submit" id="btnEnviar" class="btnEnviarClass boton">Enviar</button>
                 <button type="reset" id="btnClear" class="btnLimpiarClass boton">Limpiar</button>
               </div>
+              <div class="card-footer text-body-secondary mt-3">
+                Responderemos en menos de 24 horas
+              </div>
           </fieldset>
         </form>
-        <!-- Footer de Card para info X -->
-      </div>
-      <div class="card-footer text-body-secondary">
-        Responderemos en menos de 24 horas
-      </div>
-    </div>
-  </div>
+        
+     </div>
+      
+    
+  
 </br>
 
   <div id="footer"></div>
-
+</main>
   <script src="/js/main.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
