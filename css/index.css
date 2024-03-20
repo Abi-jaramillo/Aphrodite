@@ -1,4 +1,6 @@
-.titles, h4, h2{
+.titles,
+h4,
+h2 {
   color: black;
   font-family: "Bellota", system-ui;
   font-weight: 700;
@@ -24,7 +26,7 @@
   }
 }
 
-.titles2{
+.titles2 {
   font-family: "Alata", sans-serif;
   color: #7ba05b;
   font-weight: 400;
@@ -61,7 +63,7 @@
   height: auto;
 }
 
-.titles3{
+.titles3 {
   font-family: "Alata", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -72,7 +74,7 @@
   color: white;
   font-weight: 400;
   font-style: normal;
-} 
+}
 
 .background-video {
   position: relative;
@@ -124,9 +126,17 @@
   padding-right: 9.5em;
 }
 
-#favoritosCarousel{
+#favoritosCarousel {
   margin-bottom: 10px;
+  width: 30%;
+  height: 100%;
+  margin-top: 100px;
+
+
+
+
 }
+
 #txtLosFavoritos {
   padding: 20px;
   display: flex;
@@ -136,6 +146,9 @@
 #losFavoritosCard {
   background-color: #f7e7ce;
   border-radius: 20px;
+  max-width: 100%;
+  margin: 30px;
+
 }
 
 #btnComprar {
@@ -146,6 +159,8 @@
   border: none;
   color: #FFFFFF;
 }
+
+
 
 #contOferta {
   padding: 20px;
@@ -171,8 +186,9 @@
   min-width: 20dvh;
   max-width: 50dvh;
   max-height: 50dvh;
-} 
-.container-cuenta{
+}
+
+.container-cuenta {
   width: 100%;
   display: flex;
   align-items: center;
@@ -180,27 +196,27 @@
   flex-direction: column;
 }
 
-.countdown{
-  display:flex;
+.countdown {
+  display: flex;
   justify-content: space-evenly;
-  width:100%;
+  width: 100%;
   flex-wrap: wrap;
 }
 
-.countdown div{
+.countdown div {
   display: flex;
   justify-content: center;
-  padding:10px;
+  padding: 10px;
 
 }
 
-.countdown p{
+.countdown p {
   display: flex;
   justify-content: center;
   border: solid 1px #fefefe;
   height: 50px;
   width: 50px;
-  color:#000;
+  color: #000;
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "Quicksand", sans-serif;
@@ -210,7 +226,7 @@
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.719);
 }
 
-.countdown span{
+.countdown span {
   display: block;
   padding: 10px;
   text-align: center;
@@ -222,16 +238,16 @@
 }
 
 #btnOferta {
-    background-color: #FFFFFF;
-    font-family: "Quicksand", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
-    border: none;
-    color: black;
-    font-size: 16px;
-    border-radius: 10px;
-    padding: 10px 20px;
-    align-items: center;
-    min-width: 120px;
+  background-color: #FFFFFF;
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  border: none;
+  color: black;
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  align-items: center;
+  min-width: 120px;
 }
