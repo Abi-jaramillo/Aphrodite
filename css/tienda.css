@@ -54,7 +54,7 @@ h5{
     height: 37rem;
     margin: 10px;
     border-radius: 50px;
-    background: url(/src/images/peeling_hombre.jpg) ;
+    background: url(./src/images/peeling_hombre.jpg) ;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -62,12 +62,12 @@ h5{
 }
 
 #img-box1{
-    background: url(/src/images/skincarechica.jpg);
+    background: url(./src/images/skincarechica.jpg);
     background-size: cover;
     background-position:center;
 }
 #img-box2{
-    background: url(/src/images/cuidadocabello.jpg);
+    background: url(./src/images/cuidadocabello.jpg);
     background-size: cover;
     background-position: center;
 }

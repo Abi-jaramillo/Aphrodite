@@ -7,7 +7,7 @@
 }
 
 .bg-imagecontacto {
-    background-image: url(../src/images/FondodeHojas.png);
+    background-image: url(./src/images/FondodeHojas.png);
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-size: cover;
@@ -15,7 +15,7 @@
 }
 
 .bg-imagecontacto2 {
-    background-image: url(../src/images/FondodeHojas.png);
+    background-image: url(./src/images/FondodeHojas.png);
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-size: cover;
