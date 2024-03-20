@@ -61,7 +61,7 @@ navbar.insertAdjacentHTML("beforeend", `
                 <a class="nav-link active" aria-current="page" href="./administrador.html">Administrador</a>
                 </li>
             
-                <a href="./logIn.html" target="_blank"><i id="login" class="bi bi-person-circle"></i></a>
+                <a href="./logIn.html" target="_blank"><i id="login" class="bi bi-person-circle"></i><div id="usuario_sesion">Usuario</div></a>
                 <a href="#" target="_blank"><i id="carrito1" class="bi bi-cart3"></i></a>
             </ul>
             
@@ -69,3 +69,4 @@ navbar.insertAdjacentHTML("beforeend", `
     </div>
     </nav >
 `);
+

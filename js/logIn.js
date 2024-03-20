@@ -29,25 +29,25 @@ let regexContrasena = (/^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])([A-Za-z\d$@$!
 let storedData =localStorage.getItem("informacion");
 let info = new Array();
 //alerta Validación 
-btnRegistrarse.addEventListener("submit", function (event) {
+btnRegistrarse.addEventListener("click", function (event) {
     event.preventDefault();
 
-    alertValidacionesTexto.innerHTML="";
-    alertValidaciones.style.display="none";
-    alertConfirmacionesTexto.innerHTML="";
-    alertConfirmaciones.style.display="none";
+    // alertValidacionesTexto.innerHTML="";
+    // alertValidaciones.style.display="none";
+    // alertConfirmacionesTexto.innerHTML="";
+    // alertConfirmaciones.style.display="none";
 
-    txtNombre.value = txtNombre.value.trim();
-    txtTelefono.value = txtTelefono.value.trim();
-    txtCorreo.value = txtCorreo.value.trim();
-    txtContrasena1.value= txtContrasena1.value.trim();
-    txtContrasena2.value= txtContrasena2.value.trim();
+    // txtNombre.value = txtNombre.value.trim();
+    // txtTelefono.value = txtTelefono.value.trim();
+    // txtCorreo.value = txtCorreo.value.trim();
+    // txtContrasena1.value= txtContrasena1.value.trim();
+    // txtContrasena2.value= txtContrasena2.value.trim();
 
-    txtNombre.style.border="";
-    txtTelefono.style.border="";
-    txtCorreo.style.border="";
-    txtContrasena1.style.border="";
-    txtContrasena2.style.border="";
+    // txtNombre.style.border="";
+    // txtTelefono.style.border="";
+    // txtCorreo.style.border="";
+    // txtContrasena1.style.border="";
+    // txtContrasena2.style.border="";
 
     var hayError = false;
 
@@ -143,7 +143,8 @@ btnClear.addEventListener("click", function(event){
 
 });
 
-btnInicio.addEventListener("submit",function(event){
+let logInUser = document.getElementById(".usuario_sesion")
+btnInicio.addEventListener("click",function(event){
     event.preventDefault();
     let validaInicio = info.find(usuario => usuario.Correo === emailInicio.value && usuario.Contraseña === passInicio.value)
     if(!validaInicio){
@@ -153,13 +154,19 @@ btnInicio.addEventListener("submit",function(event){
             icon: "error"
     });
     }
-
+    // logInUser.insertAdjacentHTML="beforeend",`${validaInicio.Nombre}`;
+   
     Swal.fire({
         title: "¡Bienvenido!",
         text: `${validaInicio.Nombre}`,
         icon: "success"
     });
+
+    
     window.location.href = "index.html";
+   
+    
+    
 
 
 });
@@ -190,7 +197,7 @@ btnSignUp.addEventListener("click",()=>{
   
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
-      form.addEventListener('submit', event => {
+      form.addEventListener('click', event => {
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
