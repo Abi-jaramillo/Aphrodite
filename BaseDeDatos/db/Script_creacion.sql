@@ -30,9 +30,11 @@ ENGINE = InnoDB;
 -- Table `Aphrodite`.`categoría`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Aphrodite`.`categoría` (
-  `categoría` ENUM('piel', 'cabello', 'maquillaje') NOT NULL,
-  PRIMARY KEY (`categoría`),
-  UNIQUE INDEX `no_categoría_UNIQUE` (`categoría` ASC) VISIBLE)
+  `id` INT NOT NULL,
+  `nombre` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `no_categoría_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `nombre_UNIQUE` (`nombre` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -44,12 +46,12 @@ CREATE TABLE IF NOT EXISTS `Aphrodite`.`producto` (
   `nombre` VARCHAR(45) NOT NULL,
   `descripción` TEXT NOT NULL,
   `precio` VARCHAR(45) NOT NULL,
-  `categoría` ENUM('PIEL', 'CABELLO', 'MAQUILLAJE') NOT NULL,
-  PRIMARY KEY (`idproducto`, `categoría`),
-  INDEX `fk_producto_categoría1_idx` (`categoría` ASC) VISIBLE,
+  `categoría_id` INT NOT NULL,
+  PRIMARY KEY (`idproducto`, `categoría_id`),
+  INDEX `fk_producto_categoría1_idx` (`categoría_id` ASC) VISIBLE,
   CONSTRAINT `fk_producto_categoría1`
-    FOREIGN KEY (`categoría`)
-    REFERENCES `Aphrodite`.`categoría` (`categoría`)
+    FOREIGN KEY (`categoría_id`)
+    REFERENCES `Aphrodite`.`categoría` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
