@@ -251,3 +251,86 @@ h2 {
   align-items: center;
   min-width: 120px;
 }
+
+/* Cards giratorias */
+.container-cardgr{
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-gr{
+  position: relative;
+  width: 250px;
+  height: 300px;
+  margin: 20px;
+}
+.card-gr .face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.card-gr .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px;
+  transition: .5s ease-in-out;
+}
+
+.card-gr .front img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card-gr .front h3{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color:#7ba05b; 
+  text-align: center;
+}
+.card-gr .back{
+  transform: perspective(600px) rotateY(180deg);
+  background-color: #f7e7ce;
+  padding: 15px;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+  cursor: pointer;
+  transition: .5s ease-in-out;
+}
+
+.card-gr .back button{
+  color: #f7e7ce;
+  background: #7ba05b;
+  border: 2px solid #f7e7ce;
+  border-radius: 10px;
+  padding: 5px;
+
+}
+.card-gr .back button:hover{
+  color: #7ba05b;
+  background: #f7e7ce;
+  border: 2px solid #7ba05b;
+}
+.card-gr .back h3{
+  margin-top: 20px;
+}
+
+.card-gr:hover .front{
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.card-gr:hover .back{
+  transform: perspective(600px) rotateY(360deg);
+}
+
+/* Cards giratorias */
